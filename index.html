@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Orbio Assist</title>
+<meta name="description" content="ORBIO ASSIST provides professional UK virtual assistant and business support services for SMEs, agencies and entrepreneurs. Request a tailored proposal.">
+<meta name="theme-color" content="#0a1931">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ORBIO ASSIST | Virtual Assistant &amp; Business Support UK">
+<meta property="og:description" content="Professional, flexible virtual assistant and business support services for UK businesses. Request a tailored proposal.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ORBIO ASSIST","legalName":"ORBIO LTD","description":"Virtual assistant and business support services for UK businesses.","email":"info@orbioltd.co.uk","areaServed":"GB"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+/* Layout: sticky white nav, deep-green hero with drifting blurred glow and two live phone mock-ups, mint/white sections, hash-routed pages, one shared proposal form at the end of every page */
+:root{
+  --ink:#0a1931; --ink-2:#4a5f7a; --green:#1459a8; --green-d:#0e4585; --leaf:#4fb3e8; --mint:#eaf4fc; --line:#d5e3f1; --white:#FFFFFF; --amber:#E8A33D;
+  --f-d:'Bricolage Grotesque',Georgia,'Times New Roman',serif; --f-b:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[hidden]{display:none!important}
+body{margin:0;background:var(--white);color:var(--ink);font:400 16px/1.65 var(--f-b);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--white)}
+h1,h2,h3,h4{font-family:var(--f-d);line-height:1.08;margin:0;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{padding-block:76px}
+.alt{background:var(--mint)}
+.kicker{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.sec-head{display:grid;gap:14px;max-width:720px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800}
+.sec-head p{color:var(--ink-2);font-size:1.05rem}
+.center{margin-inline:auto;text-align:center}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:10px;border:2px solid transparent;background:transparent;font:700 .98rem/1.2 var(--f-b);cursor:pointer;text-decoration:none;transition:transform .15s,background .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-d)}
+.btn-leaf{background:var(--leaf);color:#06203f}
+.btn-leaf:hover{background:#7cc8f0}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-line{border-color:var(--green);color:var(--green);background:transparent}
+.btn-line:hover{background:var(--green);color:#fff}
+.btn-sm{padding:10px 16px;font-size:.9rem}
+
+/* top bar */
+.topbar{background:#061225;color:#9db9db;font-size:.82rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:38px;padding-block:6px}
+.topbar b{color:#fff;font-weight:700}
+.topbar a{text-decoration:none;color:#d6e6f8}
+.topbar a:hover{color:#fff;text-decoration:underline}
+.tb-r{display:flex;gap:20px}
+@media(max-width:700px){.tb-r{display:none}.topbar{font-size:.76rem}.topbar .wrap{justify-content:center;text-align:center}}
+
+/* header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--white);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;height:72px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.18rem/1 var(--f-d);letter-spacing:.02em;white-space:nowrap}
+.logo b{color:var(--green);font-weight:800}
+.logo svg{flex:none}
+#nav{display:flex;gap:6px;margin-left:auto}
+#nav a{padding:10px 12px;border-radius:8px;text-decoration:none;font-weight:500;color:var(--ink-2)}
+#nav a:hover{background:var(--mint);color:var(--ink)}
+#nav a.on{color:var(--green);font-weight:700;background:var(--mint)}
+.burger{display:none;margin-left:auto;width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:var(--white);cursor:pointer}
+@media(max-width:1100px){
+  .burger{display:grid;place-items:center}
+  .head-cta{display:none}
+  #nav{display:none;position:absolute;left:0;right:0;top:72px;background:var(--white);border-bottom:1px solid var(--line);flex-direction:column;padding:10px max(16px,env(safe-area-inset-left,0px)) 16px;margin:0}
+  #nav.open{display:flex}
+  #nav a{padding:14px 12px}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:#0a1931;color:#fff;padding-block:68px 72px}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);animation:drift 18s ease-in-out infinite alternate;pointer-events:none}
+.b1{width:440px;height:440px;background:#2e7dd1;opacity:.55;top:-140px;left:-100px}
+.b2{width:380px;height:380px;background:#1459a8;opacity:.7;bottom:-160px;right:22%;animation-delay:-6s}
+.b3{width:320px;height:320px;background:#87ceeb;opacity:.22;top:28%;right:-90px;animation-delay:-11s}
+@keyframes drift{to{transform:translate(70px,45px) scale(1.18)}}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4;filter:blur(3px)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(10,25,49,.88) 0%,rgba(10,25,49,.5) 60%,rgba(10,25,49,.3) 100%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center}
+.hero-grid>*{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid rgba(255,255,255,.28);border-radius:99px;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#d6e9fa}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 0 rgba(79,179,232,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(79,179,232,0)}100%{box-shadow:0 0 0 0 rgba(79,179,232,0)}}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.3rem);font-weight:800;margin:22px 0 20px}
+.hero h1 em{font-style:normal;color:var(--leaf);display:block}
+.hero p.lead{font-size:1.12rem;color:#cbddf2;max-width:540px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-note{margin-top:22px;font-size:.85rem;color:#9db9db}
+
+/* phones: every size uses cqw so the mock-up scales as one object */
+.phones{position:relative;container-type:inline-size;width:min(100%,470px);aspect-ratio:1/1.2;margin-inline:auto}
+.phone{position:absolute;width:51cqw;height:100cqw;background:#fff;color:#0a1931;border:1.6cqw solid #0a0f0d;border-radius:8cqw;overflow:hidden;box-shadow:0 5cqw 9cqw rgba(0,0,0,.45)}
+.pa{left:0;top:14cqw}
+.pb{right:0;top:7cqw;z-index:2}
+.notch{position:absolute;top:1.6cqw;left:50%;transform:translateX(-50%);width:15cqw;height:4cqw;border-radius:4cqw;background:#0a0f0d;z-index:3}
+.ph-in{position:absolute;inset:0;padding:7cqw 3.4cqw 0;display:flex;flex-direction:column;gap:1.8cqw;font-size:2.5cqw;line-height:1.3;background:#f5f9fe}
+.ph-in small{font-size:2.1cqw;color:#6c7f99;display:block}
+.ph-in b{font-weight:700}
+.ph-hello{display:flex;justify-content:space-between;align-items:center;padding-top:1.5cqw}
+.ph-hello b{font:800 3.6cqw/1.1 var(--f-d)}
+.av{width:6.6cqw;height:6.6cqw;border-radius:50%;background:#dcebfb;color:#1459a8;display:grid;place-items:center;font-size:2.2cqw;font-weight:700;flex:none}
+.card{background:#fff;border:1px solid #dce7f4;border-radius:2.8cqw;padding:2.4cqw 2.8cqw}
+.c-head{display:flex;justify-content:space-between;align-items:center;gap:1cqw;margin-bottom:1.2cqw}
+.c-head small{color:#1459a8;font-weight:700}
+.ring-row{display:flex;align-items:center;gap:2.4cqw}
+.ring{width:10cqw;height:10cqw;transform:rotate(-90deg);flex:none}
+.r-bg,.r-fg{fill:none;stroke-width:4;transition:stroke-dasharray .6s}
+.r-bg{stroke:#dce7f4}
+.r-fg{stroke:#1e7bd6;stroke-linecap:round}
+.ring-row b{font:800 3.4cqw/1.1 var(--f-d);white-space:nowrap}
+.ring-row small{white-space:nowrap}
+.pct{margin-left:auto;background:#dcebfb;color:#1459a8;font-weight:700;padding:.8cqw 1.8cqw;border-radius:1.6cqw}
+.card p{transition:opacity .3s}
+.fade{opacity:0}
+.pill{display:inline-block;font-size:2cqw;font-weight:700;padding:.5cqw 1.6cqw;border-radius:99px;white-space:nowrap;transition:background .3s,color .3s}
+.pill.new{background:#fff0d9;color:#A96300}
+.pill.prog{background:#E1ECFA;color:#2B5AA0}
+.pill.done{background:#dcebfb;color:#1459a8}
+.btn-o{padding:2cqw;text-align:center;border-radius:2.2cqw;font-weight:700;background:#1459a8;color:#fff}
+.btn-o.o{background:#fff;color:#1459a8;border:1px solid #1459a8}
+.tabbar{margin-top:auto;display:flex;justify-content:space-around;padding:2.2cqw 0 3.2cqw;border-top:1px solid #dce7f4;background:#fff;margin-inline:-3.4cqw;color:#7f92ac;font-size:2.1cqw}
+.tabbar .on{color:#1459a8;font-weight:700}
+.pb .ph-in{background:#fff}
+.t-head{display:flex;justify-content:space-between;align-items:center;margin-top:1cqw}
+.t-head h3{font-size:4.6cqw;font-weight:800}
+.add{background:#1459a8;color:#fff;font-weight:700;padding:1.4cqw 2.4cqw;border-radius:2cqw;font-size:2.2cqw}
+.tabs{display:flex;gap:3cqw;border-bottom:1px solid #dce7f4;font-size:2.2cqw;color:#6c7f99;padding-bottom:1.4cqw}
+.tabs .on{color:#1459a8;font-weight:700}
+#taskList{display:flex;flex-direction:column;gap:1.5cqw;margin-top:.5cqw}
+.t-row{display:flex;align-items:center;gap:2cqw;padding:1.9cqw 2.2cqw;border:1px solid #dce7f4;border-radius:2.8cqw;background:#fff;transition:background .3s,opacity .4s,transform .4s}
+.t-row.enter{animation:rowin .5s ease}
+.t-row.out{opacity:0;transform:translateX(6cqw)}
+.t-row.is-new{background:#FFF8EC;border-color:#F6DDB4}
+.t-row.is-done{background:#f2f7fd}
+@keyframes rowin{from{opacity:0;transform:translateY(-4cqw)}}
+.chk{width:4.2cqw;height:4.2cqw;border-radius:1.1cqw;border:.5cqw solid #b3c6de;flex:none;display:grid;place-items:center;transition:background .25s,border-color .25s}
+.chk svg{width:70%;height:70%;opacity:0;transform:scale(.3);transition:opacity .25s,transform .3s cubic-bezier(.3,1.6,.5,1)}
+.is-done .chk{background:#1e7bd6;border-color:#1e7bd6}
+.is-done .chk svg{opacity:1;transform:none}
+.t-main{flex:1;min-width:0}
+.t-title{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color .3s}
+.is-done .t-title{text-decoration:line-through;color:#7f92ac}
+.toast{position:absolute;left:3cqw;right:3cqw;bottom:3.4cqw;background:#0a1931;color:#fff;padding:2.2cqw 2.8cqw;border-radius:2.6cqw;font-size:2.3cqw;display:flex;gap:1.6cqw;align-items:center;transition:opacity .3s,transform .3s}
+.toast.fade{opacity:0;transform:translateY(2cqw)}
+.toast i{font-style:normal;color:#7cc8f0;font-weight:700}
+.live{position:absolute;right:0;top:0;z-index:3;background:#0a1931;color:#fff;border:1px solid rgba(255,255,255,.18);padding:1.5cqw 3.2cqw;border-radius:99px;font-size:2.5cqw;font-weight:700;display:flex;gap:1.6cqw;align-items:center}
+.live .dot{width:2cqw;height:2cqw}
+.illus{position:absolute;left:0;bottom:0;font-size:2.4cqw;color:#9db9db}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.phones{margin-top:18px}}
+
+/* trust strip */
+.strip{background:var(--white);border-bottom:1px solid var(--line);padding-block:0}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip .it{padding:24px 20px;border-right:1px solid var(--line);display:grid;gap:2px;min-width:0}
+.strip .it:last-child{border-right:0}
+.strip b{font:800 1.05rem/1.25 var(--f-d)}
+.strip span{color:var(--ink-2);font-size:.9rem}
+@media(max-width:780px){.strip .wrap{grid-template-columns:1fr 1fr}.strip .it:nth-child(2){border-right:0}.strip .it:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* split blocks */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split>*{min-width:0}
+@media(max-width:860px){.split{grid-template-columns:1fr;gap:32px}}
+.ticks{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/70% no-repeat}
+.panel{border-radius:20px;background:linear-gradient(150deg,#1459a8,#0a2a57);color:#fff;padding:34px;display:grid;gap:18px;position:relative;overflow:hidden}
+.panel::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:var(--leaf);opacity:.18;filter:blur(40px);right:-60px;bottom:-60px}
+.panel h3{font-size:1.5rem}
+.panel p{color:#c7dbf2}
+.stack{display:grid;gap:10px;position:relative;z-index:1}
+.stack div{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;border-radius:10px;background:rgba(255,255,255,.1);font-weight:500}
+.stack span{color:var(--leaf);font-weight:700}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;gap:10px;align-items:center;padding:11px 16px;border-radius:99px;background:var(--white);border:1px solid var(--line);text-decoration:none;font-weight:500;transition:border-color .2s,transform .15s}
+a.chip:hover{border-color:var(--green);transform:translateY(-2px)}
+.chip i{font:700 .72rem/1 var(--f-b);font-style:normal;color:var(--green);letter-spacing:.06em}
+.chips.plain .chip{cursor:default}
+
+/* CTA band */
+.band{background:linear-gradient(120deg,#0e4585,#1459a8);color:#fff;border-radius:22px;padding:44px;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center;position:relative;overflow:hidden}
+.band>*{min-width:0}
+.band h2{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;margin-bottom:12px}
+.band p{color:#cbddf2;max-width:620px}
+.band .btn{justify-self:start}
+@media(max-width:780px){.band{grid-template-columns:1fr;padding:30px 22px}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:s;position:relative}
+.step{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px 18px;display:grid;gap:10px;align-content:start;min-width:0}
+.step::before{counter-increment:s;content:counter(s);width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font:800 1rem var(--f-d)}
+.step h3{font-size:1.02rem;letter-spacing:0}
+.step p{color:var(--ink-2);font-size:.92rem}
+@media(max-width:1000px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* arrangement cards */
+.arr{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.arr div{padding:20px 22px;border:1px solid var(--line);border-radius:14px;background:var(--white);display:grid;gap:4px}
+.arr b{font:700 1.05rem var(--f-d)}
+.arr span{color:var(--ink-2);font-size:.93rem}
+@media(max-width:860px){.arr{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.arr{grid-template-columns:1fr}}
+
+/* page hero */
+.page-hero{position:relative;overflow:hidden;background:#0a1931;color:#fff;padding-block:64px 60px}
+.page-hero .wrap{position:relative;z-index:1;display:grid;gap:16px;max-width:1180px}
+.page-hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:800;max-width:820px}
+.page-hero p{color:#cbddf2;max-width:680px;font-size:1.08rem}
+.page-hero .blob{opacity:.45}
+
+/* service name cards */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:980px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
+.svc-card{display:flex;align-items:center;gap:16px;text-align:left;width:100%;padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:var(--white);color:var(--ink);font:700 1.04rem/1.3 var(--f-d);cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s;min-width:0}
+.svc-card:hover{border-color:var(--green);box-shadow:0 12px 28px rgba(10,25,49,.1);transform:translateY(-3px)}
+.svc-card .num{flex:none;width:40px;height:40px;border-radius:12px;background:var(--mint);color:var(--green);display:grid;place-items:center;font:800 .85rem var(--f-b);letter-spacing:.04em}
+.svc-card .nm{flex:1;min-width:0}
+.svc-card .go{flex:none;color:var(--green);font-size:1.2rem;transition:transform .2s}
+.svc-card:hover .go{transform:translateX(4px)}
+.incl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+@media(max-width:900px){.incl{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.incl{grid-template-columns:1fr}}
+.incl div{padding:18px 20px;border-radius:14px;background:var(--white);border:1px solid var(--line);display:grid;gap:4px}
+.incl b{font:700 1rem var(--f-d)}
+.incl span{color:var(--ink-2);font-size:.9rem}
+.legal-line{margin-top:28px;padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:var(--mint);font-size:.92rem;color:var(--ink-2);text-align:center}
+.legal-line b{color:var(--ink)}
+main{animation:pagein .4s ease}
+@keyframes pagein{from{opacity:0;transform:translateY(8px)}}
+
+/* data protection registration */
+.reg{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:28px 32px;border:1px solid var(--line);border-radius:20px;background:var(--white)}
+.reg>*{min-width:0}
+.reg .shield{width:64px;height:64px;border-radius:18px;background:var(--mint);display:grid;place-items:center}
+.reg h3{font-size:1.35rem;margin-bottom:6px}
+.reg p{color:var(--ink-2)}
+.reg .ref{margin-top:8px;font-weight:700;color:var(--ink)}
+.reg .ref b{color:var(--green);letter-spacing:.04em}
+@media(max-width:820px){.reg{grid-template-columns:1fr;padding:24px 20px;gap:16px}.reg .btn{justify-self:start}}
+
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+@media(max-width:1060px){.plans{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:26px 22px;display:flex;flex-direction:column;gap:14px;min-width:0;position:relative}
+.plan.top{background:#0a1f3f;color:#fff;border-color:#0a1f3f}
+.plan.pop{border:2px solid var(--green)}
+.badge{position:absolute;top:-13px;left:22px;background:var(--leaf);color:#06203f;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:99px}
+.plan h3{font-size:1.25rem}
+.price{font:800 2.2rem/1 var(--f-d)}
+.price small{font:500 .9rem var(--f-b);color:var(--ink-2)}
+.top .price small,.top .hrs{color:#9db9db}
+.hrs{color:var(--ink-2);font-weight:500;font-size:.92rem}
+.plan ul{margin:0;padding:0;list-style:none;display:grid;gap:9px;font-size:.93rem;flex:1}
+.plan li{display:flex;gap:9px}
+.plan li::before{content:"\2713";color:var(--green);font-weight:800}
+.top li::before{color:var(--leaf)}
+.fine{margin-top:22px;color:var(--ink-2);font-size:.9rem}
+
+/* why */
+.pillars{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media(max-width:1060px){.pillars{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.pillars{grid-template-columns:1fr 1fr}}
+@media(max-width:440px){.pillars{grid-template-columns:1fr}}
+.pillar{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:8px;align-content:start;min-width:0}
+.pillar .ic{width:42px;height:42px;border-radius:12px;background:var(--mint);display:grid;place-items:center}
+.pillar h3{font-size:1.02rem;letter-spacing:0}
+.pillar p{color:var(--ink-2);font-size:.9rem}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--white)}
+table{border-collapse:collapse;width:100%;min-width:680px}
+th,td{padding:16px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);font-size:.94rem}
+tr:last-child td{border-bottom:0}
+th{font:700 .8rem var(--f-b);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:var(--mint)}
+th.us,td.us{background:#f1f7fe;color:var(--ink)}
+th.us{color:var(--green)}
+td:first-child{font-weight:700;width:22%}
+
+/* detail cards */
+ .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.cols3{grid-template-columns:1fr}}
+.box{border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--white);display:grid;gap:10px;align-content:start}
+.box h3{font-size:1.2rem}
+.box p{color:var(--ink-2);font-size:.95rem}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:860px}
+.faq details{border:1px solid var(--line);border-radius:14px;background:var(--white);padding:0 20px}
+.faq summary{padding:18px 0;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{padding-bottom:18px;color:var(--ink-2)}
+
+/* proposal */
+#proposal{background:linear-gradient(180deg,var(--mint),#fff 100%);scroll-margin-top:90px}
+.prop{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.prop>*{min-width:0}
+@media(max-width:900px){.prop{grid-template-columns:1fr;gap:28px}}
+.prop h2{font-size:clamp(1.9rem,3.8vw,2.7rem);font-weight:800;margin:12px 0 16px}
+.prop p{color:var(--ink-2)}
+.contact-lines{margin-top:26px;display:grid;gap:12px;font-weight:500}
+.contact-lines span{color:var(--ink-2);font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:block}
+form{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:30px;display:grid;gap:16px;box-shadow:0 18px 44px rgba(10,25,49,.08)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.row2{grid-template-columns:1fr}form{padding:22px 18px}}
+label{display:grid;gap:6px;font-weight:700;font-size:.9rem;min-width:0}
+input,select,textarea{width:100%;font:400 1rem var(--f-b);color:var(--ink);background:#fff;border:1.5px solid #b9cce3;border-radius:10px;padding:12px 14px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(79,179,232,.25)}
+textarea{min-height:110px;resize:vertical}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+.consent{font-size:.82rem;color:var(--ink-2);font-weight:400}
+.msg{padding:12px 14px;border-radius:10px;font-size:.92rem;font-weight:500}
+.msg.err{background:#FDECEA;color:#8A1F11}
+.msg.warn{background:#FFF4DE;color:#7A4A00}
+.thanks{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:40px 30px;text-align:center;display:grid;gap:12px;justify-items:center}
+.thanks .big{width:60px;height:60px;border-radius:50%;background:var(--green);display:grid;place-items:center}
+
+/* footer */
+footer{background:#0a1931;color:#b9cde8;padding-block:56px 30px}
+.f-grid{display:grid;grid-template-columns:1.3fr .8fr 1.1fr 1.4fr;gap:36px}
+.f-grid>*{min-width:0}
+@media(max-width:1000px){.f-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.f-grid{grid-template-columns:1fr;gap:28px}}
+footer h4{color:#fff;font-size:1rem;margin-bottom:14px;letter-spacing:0}
+footer a{text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer .logo{color:#fff;margin-bottom:14px}
+footer .logo b{color:var(--leaf)}
+.f-small{font-size:.88rem;line-height:1.7;overflow-wrap:anywhere}
+.backend{margin-top:18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-weight:500;color:#fff}
+.legal-links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.88rem}
+.legal-links button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0;text-decoration:underline}
+.copy{margin-top:14px;font-size:.82rem;color:#8fa9cf}
+
+/* whatsapp */
+.wa{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:35;display:flex;align-items:center;gap:10px;flex-direction:row-reverse}
+.wa a.fab{width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.3);transition:transform .2s}
+.wa a.fab:hover{transform:scale(1.08)}
+.wa .tip{background:#fff;color:var(--ink);padding:10px 14px;border-radius:12px;box-shadow:0 8px 22px rgba(0,0,0,.18);font-weight:700;font-size:.9rem;opacity:0;transform:translateX(12px);transition:opacity .4s,transform .4s;pointer-events:none;max-width:60vw}
+.wa .tip.show{opacity:1;transform:none;pointer-events:auto}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:60;background:rgba(10,25,49,.7);display:grid;place-items:center;padding:20px}
+.modal .m{background:#fff;color:var(--ink);border-radius:18px;max-width:680px;width:100%;max-height:84vh;overflow:auto;padding:30px;display:grid;gap:12px}
+.modal h3{font-size:1.5rem}
+.modal h4{font-size:1rem;margin-top:8px;letter-spacing:0}
+.modal p,.modal li{color:var(--ink-2);font-size:.95rem}
+.modal ul{margin:0;padding-left:20px}
+
+/* light white + sky-blue theme */
+[id]{scroll-margin-top:96px}
+.hero{background:linear-gradient(180deg,#EAF4FC 0%,#FFFFFF 100%);color:var(--ink);padding-block:60px 56px}
+.hero::after{display:none}
+.b1{background:#BFE3F7;opacity:.6}.b2{background:#9CCBF0;opacity:.4}.b3{background:#D8EEFB;opacity:.9}
+.eyebrow{border-color:#B8D4EC;color:var(--green);background:#fff}
+.hero h1{font-size:clamp(2.4rem,5.2vw,3.9rem);margin:20px 0 10px;color:var(--ink)}
+.hero h1 .blue{color:var(--green)}
+.tagline{font:700 1.35rem/1.3 var(--f-d);color:var(--ink);margin-bottom:12px}
+.hero p.lead{color:var(--ink-2)}
+.hero-note{color:var(--ink-2)}
+.phone{box-shadow:0 5cqw 9cqw rgba(10,25,49,.22)}
+.page-hero{background:var(--mint);color:var(--ink)}
+.page-hero p{color:var(--ink-2)}
+.page-hero .kicker{color:var(--green)}
+.page-hero .blob{opacity:.35}
+.box strong{color:var(--ink);font-weight:700}
+#reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){#reviews{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){#reviews{grid-template-columns:1fr}}
+.rev{border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--white);display:grid;gap:12px;margin:0}
+.rev.empty{border-style:dashed;background:var(--mint);text-align:center;justify-items:center;color:var(--ink-2);padding:44px 28px}
+.stars{color:#B3C6DE;letter-spacing:.2em;font-size:1.4rem}
+.rev:not(.empty) .stars{color:var(--amber)}
+.rev blockquote{margin:0;font-size:1.02rem}
+.rev figcaption{display:grid;font-size:.9rem;color:var(--ink-2)}
+.rev figcaption b{color:var(--ink)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* basic UK-trade theme */
+.blob{display:none!important}
+.hero,.page-hero{background:#f3f8fd!important;border-bottom:1px solid #d5e3f1}
+.band{background:#eaf4fc!important;border:1px solid #d5e3f1;box-shadow:none!important;color:#0a1931!important}
+.band h2,.band p{color:#0a1931!important}
+.alt{background:#f7fafd!important}
+.box,.rev,.svc-card,.plan,.step,.arr>div,.pillar{box-shadow:none!important;border-radius:6px!important}
+.btn{border-radius:4px!important;box-shadow:none!important}
+.kicker{background:none!important;padding:0!important;border-radius:0!important;color:#1459a8!important}
+
+/* plain UK business look */
+html body *{font-family:Arial,Helvetica,"Segoe UI",sans-serif!important}
+body,h1,h2,h3,h4,.logo,.btn,.kicker,.eyebrow{font-family:Arial,Helvetica,"Segoe UI",sans-serif!important}
+body{background:#fff!important;color:#222}
+h1,h2,h3{letter-spacing:0!important;font-weight:700!important;color:#0a2a4a}
+h1{font-size:clamp(28px,4vw,42px)!important;line-height:1.2!important}
+h2{font-size:clamp(22px,2.6vw,30px)!important}
+.hero,.page-hero{background:#fff!important;border-bottom:1px solid #e2e8ef}
+.hero h1 .blue{color:#1459a8}
+.eyebrow{display:none!important}
+.tagline{font-weight:400!important}
+.topbar{background:#1459a8!important}
+.site-head{box-shadow:none!important;border-bottom:1px solid #e2e8ef}
+.strip{background:#f3f7fb!important}
+.chip{border-radius:4px!important;background:#fff!important}
+.rev{background:#fff!important;border:1px solid #d5e3f1!important}
+.footer,footer{background:#0a2a4a!important}
+
+footer{padding-block:0 30px!important}
+.f-reg{background:#87ceeb;color:#000;padding-block:22px;border-bottom:4px solid #1459a8}
+.f-reg-in{display:grid;grid-template-columns:repeat(4,auto);gap:20px 32px;justify-content:space-between}
+.f-reg-in span{display:flex;flex-direction:column;gap:4px;min-width:0}
+.f-reg-in small{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#0a2a4a;font-weight:700}
+.f-reg-in b{font-size:1.05rem;color:#000}
+.f-reg-in a,.f-reg-in a:hover{color:#000;text-decoration:underline}
+@media(max-width:900px){.f-reg-in{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.f-reg-in{grid-template-columns:1fr}}
+
+footer .f-reg{background:#ffffff!important;border-top:6px solid #1459a8!important;border-bottom:6px solid #1459a8!important;padding-block:26px!important}
+footer .f-reg-in small{color:#1459a8!important;font-size:.8rem!important;font-weight:800!important}
+footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{color:#000000!important;font-size:1.3rem!important;font-weight:800!important;opacity:1!important}
+footer .f-small,footer .f-small a{color:#ffffff!important;font-size:1rem!important}
+footer .copy,footer .legal-links button{color:#ffffff!important}
+
+.topbar,.topbar .wrap{background:#87ceeb!important}
+.topbar{border-bottom:3px solid #1459a8;font-size:.95rem!important}
+.topbar,.topbar span,.topbar a,.topbar b,.topbar .ico{color:#000!important;opacity:1!important}
+.topbar b{font-weight:800!important}
+.topbar a{font-weight:600}
+
+.topbar,.topbar .wrap{background:#1459a8!important}
+.topbar{border-bottom:0!important;font-size:1.05rem!important}
+.topbar,.topbar span,.topbar a,.topbar b,.topbar .ico{color:#fff!important;opacity:1!important;font-weight:800!important;letter-spacing:.01em}
+.topbar .wrap{min-height:46px!important}
+@media(max-width:700px){.topbar{font-size:.9rem!important}}
+
+.topbar{font-size:1.15rem!important}
+.topbar .op{color:#000!important;font-weight:900!important}
+@media(max-width:700px){.topbar{font-size:.95rem!important}}
+
+.topbar{font-size:1.05rem!important}
+.topbar .wrap>span{white-space:nowrap}
+.topbar .tb-r{gap:18px!important}
+@media(max-width:1100px){.topbar{font-size:.95rem!important}.topbar .tb-r{display:none!important}}
+@media(max-width:700px){.topbar{font-size:.85rem!important}.topbar .wrap>span{white-space:normal}}
+
+html body .topbar,html body .topbar *{font-family:"Arial Black","Segoe UI Black",Arial,Helvetica,sans-serif!important;font-weight:900!important;color:#fff!important}
+.topbar{font-size:1.02rem!important}
+.topbar .op{color:#fff!important}
+.topbar .tb-r{gap:16px!important}
+@media(max-width:1250px){.topbar{font-size:.9rem!important}}
+@media(max-width:1100px){.topbar .tb-r{display:none!important}}
+@media(max-width:700px){.topbar{font-size:.8rem!important}}
+
+html body .topbar{font-size:1.35rem!important}
+html body .topbar .tb-r,html body .topbar .tb-r *{font-size:.9rem!important}
+.topbar .wrap{min-height:54px!important;padding-block:8px!important;justify-content:center!important}
+@media(max-width:1500px){.topbar .tb-r{display:none!important}}
+@media(max-width:1250px){html body .topbar{font-size:1.15rem!important}}
+@media(max-width:900px){html body .topbar{font-size:1rem!important}}
+@media(max-width:700px){html body .topbar{font-size:.9rem!important}.topbar .wrap>span{white-space:normal!important}}
+
+/* HireHarbour-style: large light headings, aqua bands, check bar */
+h1,h2{font-weight:500!important;color:#0b1b2b!important}
+h1{font-size:clamp(32px,4.6vw,54px)!important}
+h2{font-size:clamp(26px,3.2vw,38px)!important;line-height:1.2!important}
+.hero h1 .blue{font-weight:600}
+.alt,.strip{background:#e3f3f8!important}
+.band{background:#d8eef5!important}
+.checks{background:#d8eef5;border-block:1px solid #bfe0ea}
+.checks .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;padding-block:16px}
+.checks span{font-weight:700;color:#0b1b2b;font-size:.98rem;display:inline-flex;align-items:center;gap:8px}
+.checks>.wrap>span::before{content:"\2713";color:#1459a8;font-weight:900}
+.checks .ico{font-weight:800}
+.rev{padding:26px!important;display:flex;flex-direction:column;gap:14px}
+.rev blockquote{font-size:1.02rem!important;line-height:1.6;color:#0b1b2b;margin:0}
+.rev figcaption b{display:block;font-size:1rem}
+.rev .stars{color:#1459a8}
+.faq{max-width:none!important;grid-template-columns:repeat(3,1fr);align-items:start}
+@media(max-width:900px){.faq{grid-template-columns:1fr}}
+footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{font-size:1.1rem!important}
+.f-reg-in{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))!important}
+
+.hourly{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;max-width:900px;margin-inline:auto}
+.hr-main{padding:40px 34px;background:#eaf4fc;display:flex;flex-direction:column;gap:12px;align-items:flex-start;justify-content:center}
+.hr-label{font-weight:700;color:#1459a8;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem}
+.hr-price{font-size:clamp(2.6rem,6vw,3.8rem);font-weight:800;color:#0a1931;line-height:1}
+.hr-price small{font-size:1.4rem;font-weight:700;color:#1459a8}
+.hr-main p{color:#3a4a5e}
+.hr-list{display:flex;flex-direction:column}
+.hr-row{display:flex;justify-content:space-between;gap:12px;padding:18px 30px;border-bottom:1px solid var(--line);font-size:1.1rem}
+.hr-row:last-child{border-bottom:0}
+.hr-row b{color:#0a1931}
+@media(max-width:700px){.hourly{grid-template-columns:1fr}.hr-main{padding:28px 22px}.hr-row{padding:16px 22px}}
+#plans.plans{display:block!important}
+.hr-price small{white-space:nowrap}
+
+.ptable{display:grid;gap:26px;max-width:960px}
+.pt-intro{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.pt-intro p{font-size:1.2rem;line-height:1.6;color:#0a1931;max-width:720px}
+.ptable .tbl table{background:#fff}
+.ptable thead th{background:#0a2a4a!important;color:#fff!important}
+.ptable td{vertical-align:top}
+@media(max-width:700px){.ptable .tbl{overflow:visible!important}.ptable table{min-width:0!important;width:100%!important;table-layout:fixed}.ptable th,.ptable td{padding:12px 8px!important;font-size:.86rem!important;word-break:normal;overflow-wrap:anywhere}.ptable th{font-size:.7rem!important;letter-spacing:.02em}}
+.msg.ok{background:#E6F6EC;color:#14532D;border:1px solid #9AD5AF}
+.msg.err{border:1px solid #F1A9A0}
+</style>
+
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <span><span class="op">Operated by</span> <b>ORBIO LTD</b> &middot; Company No. <b>17473713</b> &middot; ICO Reg. No.: <b class="ico">ZC298303</b></span>
+  <span class="tb-r"><a class="js-email" href="mailto:info@orbioltd.co.uk">info@orbioltd.co.uk</a><a class="js-email2" href="mailto:support@orbioltd.co.uk">support@orbioltd.co.uk</a><a class="js-phone" href="tel:07843862112">07843 862112</a><a class="js-land" href="tel:02080580504">020 8058 0504</a></span>
+</div></div>
+<noscript><p style="padding:16px;text-align:center">Please enable JavaScript to view this website, or email info@orbioltd.co.uk.</p></noscript>
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="logo" href="#home" aria-label="ORBIO ASSIST home">
+      <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="16" stroke="#1459a8" stroke-width="3.2"/><ellipse cx="20" cy="20" rx="16" ry="6.5" stroke="#4fb3e8" stroke-width="2.4" transform="rotate(-28 20 20)"/><circle cx="30.5" cy="12.5" r="3.6" fill="#4fb3e8"/></svg>
+      <span>ORBIO <b>ASSIST</b></span>
+    </a>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#home" data-p="home">Home</a>
+      <a href="#services" data-p="services">Services</a>
+      <a href="#pricing" data-p="pricing">Pricing</a>
+      <a href="#about" data-p="about">About Us</a>
+      <a href="#contact" data-p="contact">Contact</a>
+    </nav>
+    <button class="btn btn-primary btn-sm head-cta" data-proposal>Get a Proposal</button>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a1931" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<!-- ============ HOME ============ -->
+<main id="p-home">
+  <div class="hero">
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow"><i class="dot"></i>UK Business Support Agency</span>
+          <h1><span class="blue">Virtual Assistant</span> Services for UK Businesses</h1>
+          <p class="tagline">Professional Support. More Time to Grow.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#services">Explore Our Services</a>
+            <button class="btn btn-line" data-proposal>Request a Proposal</button>
+          </div>
+        </div>
+        <div class="phones" aria-label="Illustrative preview of a client dashboard that updates as tasks are completed">
+          <div class="live"><i class="dot"></i>Live preview</div>
+
+          <div class="phone pa"><i class="notch"></i>
+            <div class="ph-in">
+              <div class="ph-hello"><div><b>Good morning</b><small>Demo Business Ltd</small></div><span class="av">DB</span></div>
+              <div class="card">
+                <div class="c-head"><b>Your VA Support</b><small>View details</small></div>
+                <div class="ring-row">
+                  <svg class="ring" viewBox="0 0 36 36"><circle class="r-bg" cx="18" cy="18" r="15.9155"/><circle id="ringFg" class="r-fg" cx="18" cy="18" r="15.9155" stroke-dasharray="72 100"/></svg>
+                  <div><b id="hrs">14h 25m</b><small>of 20h this month</small></div>
+                  <span class="pct" id="pct">72%</span>
+                </div>
+              </div>
+              <div class="card">
+                <div class="c-head"><b>Latest Update</b><small id="upAgo">Just now</small></div>
+                <p id="upTxt">Social media calendar for next month completed and sent for your review.</p>
+              </div>
+              <div class="card">
+                <div class="c-head"><b>Next Booking</b><span class="pill done" id="bkPill">Booked</span></div>
+                <p id="bkTxt">Weekly check-in · Mon 10:00</p>
+              </div>
+              <div class="btn-o">Join a Call</div>
+              <div class="tabbar"><span class="on">Home</span><span>Tasks</span><span>Documents</span><span>More</span></div>
+            </div>
+          </div>
+
+          <div class="phone pb"><i class="notch"></i>
+            <div class="ph-in">
+              <div class="ph-hello"><div><small>Demo Business Ltd</small></div><span class="av">DB</span></div>
+              <div class="t-head"><div><h3>Tasks</h3><small>Everything in one place.</small></div><span class="add">+ Add Task</span></div>
+              <div class="tabs"><span class="on">All Tasks</span><span>With your VA</span><span>Completed</span></div>
+              <div id="taskList"></div>
+              <div class="toast" id="toast"><i>✓</i><span id="toastTxt">Appointment booked: Tue 10:30</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="checks"><div class="wrap">
+    <span>UK data protection law</span>
+    <span>ICO registered: <span class="ico">ZC298303</span></span>
+    <span>UK registered company: 17473713</span>
+    <span>15 service areas</span>
+    <span>Flexible hourly support</span>
+  </div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">What We Offer</span><h2>Virtual assistant support for your business</h2></div>
+      <div class="arr">
+        <div><b>Administrative Support</b><span>Inbox, diary, data entry and documents.</span></div>
+        <div><b>Customer Support</b><span>Prompt, friendly replies to enquiries and orders.</span></div>
+        <div><b>Lead Generation</b><span>Prospect research and qualified lead lists.</span></div>
+        <div><b>Sales &amp; CRM Support</b><span>Follow-ups, pipeline updates and clean records.</span></div>
+        <div><b>E-commerce Support</b><span>Product listings, orders and store admin.</span></div>
+        <div><b>Operations Support</b><span>Scheduling, coordination and weekly reporting.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="reviewsSection" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">Proof</span><h2>What clients say</h2></div>
+      <div id="reviews"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">We Are Experts In</span><h2>Fifteen areas of business support</h2></div>
+      <div class="chips" id="homeServiceChips"></div>
+      <div class="cta-row"><a class="btn btn-primary" href="#services">View All Services</a></div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">How It Works</span><h2>Three simple steps</h2></div>
+      <div class="steps" id="steps"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">FAQs</span><h2>Common questions</h2></div>
+      <div class="faq faq-list"></div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="reg" style="margin-bottom:28px">
+        <span class="shield"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1459a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.500 3v5.500c0 4.600-3.100 8.300-7.500 9.500-4.400-1.200-7.500-4.900-7.500-9.500V6L12 3z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></span>
+        <div><h3>Data Protection Registration</h3><p>ORBIO LTD is registered with the UK Information Commissioner&rsquo;s Office (ICO).</p><p class="ref">ICO Registration Reference: <b class="ico">ZC298303</b></p></div>
+        <a class="btn btn-line js-ico-link" href="https://ico.org.uk/ESDWebPages/Entry/ZC298303" target="_blank" rel="noopener">View Official ICO Registration</a>
+      </div>
+      <div class="band">
+        <div><h2>Backend by Orbio</h2><p>ORBIO ASSIST is powered behind the scenes by Orbio, the technology company that runs our systems and tools. Visit the Orbio website to learn more about the company behind the brand.</p></div>
+        <a class="btn btn-leaf js-orbio" href="https://www.orbioltd.co.uk" target="_blank" rel="noopener">View Orbio Site</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ SERVICES ============ -->
+<main id="p-services" hidden>
+  <div class="page-hero">
+    <div class="blob b1"></div><div class="blob b2"></div>
+    <div class="wrap">
+      <span class="kicker">Our Services</span>
+      <h1>Virtual assistant services for UK businesses</h1>
+      <p>Fifteen areas of professional support. Choose yours below, or tell us what you need.</p>
+      <div class="cta-row"><button class="btn btn-primary" data-proposal>Request a Proposal</button></div>
+    </div>
+  </div>
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">Industries &amp; Services</span><h2>Select your area of support</h2></div>
+      <div class="svc-grid" id="svcGrid"></div>
+      <div class="sec-head" id="industries" style="margin-top:48px"><span class="kicker">Industries</span><h2>Industries we support</h2></div>
+      <div class="chips plain" id="industryChips"></div>
+      <div class="band" style="margin-top:44px">
+        <div><h2>Your Industry Not Listed? We Can Still Help.</h2><p>Tell us about your industry in a proposal and we will arrange the right support system for you.</p></div>
+        <button class="btn btn-leaf" data-proposal data-service="Other / Custom requirement">Send Request</button>
+      </div>
+      <p class="fine">ORBIO ASSIST provides administrative and business support. We do not provide regulated accounting, tax, legal or financial advice.</p>
+    </div>
+  </section>
+  <section class="alt" id="pricing">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">Pricing</span><h2>Pricing</h2></div>
+      <div class="plans" id="plans"></div>
+      <p class="fine">Rates are in pounds sterling. Your written proposal confirms the rate and the scope of work.</p>
+    </div>
+  </section>
+</main>
+
+<!-- ============ ABOUT ============ -->
+<main id="p-about" hidden>
+  <div class="page-hero">
+    <div class="blob b1"></div><div class="blob b3"></div>
+    <div class="wrap">
+      <span class="kicker">About Us</span>
+      <h1>About ORBIO ASSIST</h1>
+      <p>A UK business support brand operated by ORBIO LTD.</p>
+    </div>
+  </div>
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">Who We Are</span><h2>Practical support for busy businesses</h2><p>ORBIO ASSIST helps UK businesses with administration, customer communication and day-to-day operations, so owners and their teams can focus on growth.</p></div>
+      <div class="cta-row"><button class="btn btn-primary" data-proposal>Request a Proposal</button></div>
+    </div>
+  </section>
+  <section class="alt" id="why-us">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">Why Choose Us</span><h2>What you can expect</h2></div>
+      <div class="pillars" id="pillars"></div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">How We Compare</span><h2>An easier yes than a new hire</h2></div>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th class="us">ORBIO ASSIST</th><th>Freelancer</th><th>In-house employee</th></tr></thead>
+        <tbody>
+          <tr><td>Cost</td><td class="us">Pay by the hour, from &pound;3.99</td><td>Hourly or per project</td><td>Salary plus employer costs</td></tr>
+          <tr><td>Cover when away</td><td class="us">A team behind you</td><td>Often none</td><td>Arranged by you</td></tr>
+          <tr><td>Range of skills</td><td class="us">Fifteen service areas</td><td>A few specialisms</td><td>One person's skills</td></tr>
+          <tr><td>Scaling up or down</td><td class="us">Change support as you need</td><td>Limited by availability</td><td>Recruitment needed</td></tr>
+          <tr><td>Confidentiality</td><td class="us">Agreements available</td><td>Varies</td><td>Employment contract</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker">Data Protection</span><h2>Your information is handled with care</h2><p>We handle business information with care and in line with UK data protection law, including UK GDPR and the Data Protection Act 2018.</p></div>
+      <div class="reg">
+        <span class="shield"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1459a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.500 3v5.500c0 4.600-3.100 8.300-7.500 9.500-4.400-1.200-7.500-4.900-7.500-9.500V6L12 3z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></span>
+        <div><h3>Data Protection Registration</h3><p>ORBIO LTD is registered with the UK Information Commissioner&rsquo;s Office (ICO).</p><p class="ref">ICO Registration Reference: <b class="ico">ZC298303</b></p></div>
+        <a class="btn btn-line js-ico-link" href="https://ico.org.uk/ESDWebPages/Entry/ZC298303" target="_blank" rel="noopener">View Official ICO Registration</a>
+      </div>
+    </div>
+  </section>
+  <section class="alt">
+    <div class="wrap">
+      <div class="band">
+        <div><h2>Backend by Orbio</h2><p>ORBIO ASSIST runs on systems built by Orbio. Visit the Orbio website to find out more.</p></div>
+        <a class="btn btn-leaf js-orbio" href="https://www.orbioltd.co.uk" target="_blank" rel="noopener">View Orbio Site</a>
+      </div>
+      <p class="legal-line">ORBIO ASSIST is a brand of <b>ORBIO LTD</b> &middot; Company Number <b>17473713</b> &middot; ICO registration number: <b class="ico">ZC298303</b></p>
+    </div>
+  </section>
+</main>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<!-- ============ PROPOSAL (end of every page) ============ -->
+<section id="proposal">
+  <div class="wrap prop">
+    <div>
+      <span class="kicker">Send Your Proposal</span>
+      <h2>Tell us about your business and what you need</h2>
+      <p>Send your details and we will review your requirements, then come back with a tailored proposal. You do not need to pick from our list: describe what you need in your own words.</p>
+      <div class="contact-lines">
+        <div><span>Email</span><a class="js-email" href="mailto:info@orbioltd.co.uk">info@orbioltd.co.uk</a><br><a class="js-email2" href="mailto:support@orbioltd.co.uk">support@orbioltd.co.uk</a></div>
+        <div><span>Telephone</span><a class="js-phone" href="tel:07843862112">07843 862112</a></div>
+        <div><span>Landline</span><a class="js-land" href="tel:02080580504">020 8058 0504</a></div>
+        <div><span>WhatsApp</span><a class="js-wa" href="https://wa.me/447843862112" target="_blank" rel="noopener">Chat with our team</a></div>
+      </div>
+    </div>
+    <div>
+      <form id="proposalForm" novalidate>
+        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="subject" value="New Proposal – Orbio Assist (Virtual Assistant)">
+        <input type="hidden" name="_subject" value="New Proposal – Orbio Assist (Virtual Assistant)">
+        <input type="hidden" name="from_name" value="ORBIO ASSIST website">
+        <div class="row2">
+          <label for="f-name">Full name<input id="f-name" name="name" type="text" autocomplete="name" required></label>
+          <label for="f-company">Company name<input id="f-company" name="company" type="text" autocomplete="organization" required></label>
+        </div>
+        <label for="f-link">Company website or link<input id="f-link" name="company_link" type="url" placeholder="https://" autocomplete="url"></label>
+        <div class="row2">
+          <label for="f-email">Email address<input id="f-email" name="email" type="email" autocomplete="email" required></label>
+          <label for="f-phone">Contact number<input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="07xxx xxxxxx" required></label>
+        </div>
+        <label for="f-service">Your industry or service needed<select id="f-service" name="service"></select></label>
+        <label for="f-msg">Anything else we should know<textarea id="f-msg" name="message" placeholder="Tell us about your business, your industry and the support you need."></textarea></label>
+        <div class="msg" id="formMsg" role="status" aria-live="polite" hidden></div>
+        <button class="btn btn-primary" id="sendBtn" type="submit">Send Proposal</button>
+        <p class="consent">By sending this form you agree that ORBIO LTD may contact you about your enquiry. See our <button type="button" data-legal="privacy" style="background:none;border:0;padding:0;font:inherit;color:var(--green);text-decoration:underline;cursor:pointer">Privacy Policy</button>.</p>
+      </form>
+      <div class="thanks" id="thanks" hidden>
+        <span class="big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
+        <h3 style="font-size:1.6rem">Thank you, your enquiry is with us</h3>
+        <p style="color:var(--ink-2)">We will review your requirements and get back to you with a tailored proposal. If your request is urgent, call <a class="js-phone" href="tel:07843862112">07843 862112</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-reg"><div class="wrap">
+    <div class="f-reg-in">
+      <span><small>Company Name</small><b>ORBIO LTD</b></span>
+      <span><small>Company Number</small><b>17473713</b></span>
+      <span><small>ICO Registration Number</small><b><a class="js-ico-link" href="https://ico.org.uk/ESDWebPages/Entry/ZC298303" target="_blank" rel="noopener"><span class="ico">ZC298303</span></a></b></span>
+      <span><small>Data Protection</small><b>UK data protection law</b></span>
+      <span><small>Registered Office</small><b>2 Frederick Street, Kings Cross, London, WC1X 0ND</b></span>
+    </div>
+  </div></div>
+  <div class="wrap">
+    <div class="f-grid" style="margin-top:44px">
+      <div>
+        <a class="logo" href="#home"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="16" stroke="#4fb3e8" stroke-width="3.2"/><ellipse cx="20" cy="20" rx="16" ry="6.5" stroke="#fff" stroke-width="2.4" transform="rotate(-28 20 20)"/><circle cx="30.5" cy="12.5" r="3.6" fill="#4fb3e8"/></svg><span>ORBIO <b>ASSIST</b></span></a>
+        <p class="f-small">Professional virtual assistant and business support for UK businesses.</p>
+        <p style="margin-top:16px"><button class="btn btn-leaf btn-sm" data-proposal>Get a Proposal</button></p>
+        <div class="backend"><span>Backend by Orbio</span><a class="btn btn-ghost btn-sm js-orbio" href="https://www.orbioltd.co.uk" target="_blank" rel="noopener">View Orbio Site</a></div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#about">About Us</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Our Services</h4>
+        <ul id="footServices"></ul>
+      </div>
+      <div class="f-small">
+        <h4>Company Details</h4>
+        ORBIO ASSIST is a brand of ORBIO LTD<br>
+        Company Number: 17473713<br>
+        ICO registration number: <a class="js-ico-link" href="https://ico.org.uk/ESDWebPages/Entry/ZC298303" target="_blank" rel="noopener"><span class="ico">ZC298303</span></a><br>
+        Email: <a class="js-email" href="mailto:info@orbioltd.co.uk">info@orbioltd.co.uk</a><br>
+        Support: <a class="js-email2" href="mailto:support@orbioltd.co.uk">support@orbioltd.co.uk</a><br>
+        Mobile: <a class="js-phone" href="tel:07843862112">07843 862112</a><br>
+        Landline: <a class="js-land" href="tel:02080580504">020 8058 0504</a><br>
+        Website: <a class="js-orbio-text" href="https://www.orbioltd.co.uk" target="_blank" rel="noopener">www.orbioltd.co.uk</a><br>
+        Registered office: 2 Frederick Street, Kings Cross, London, WC1X 0ND, United Kingdom
+      </div>
+    </div>
+    <div class="legal-links">
+      <button type="button" data-legal="privacy">Privacy Policy</button>
+      <button type="button" data-legal="cookies">Cookie Policy</button>
+      <button type="button" data-legal="terms">Terms &amp; Conditions</button>
+    </div>
+    <p class="copy">&copy; 2026 ORBIO LTD. All rights reserved. ORBIO ASSIST is a brand of ORBIO LTD.</p>
+  </div>
+</footer>
+
+<div class="wa">
+  <a class="fab js-wa" data-text="Hello ORBIO ASSIST, I'd like to discuss virtual assistant support." href="https://wa.me/447843862112?text=Hello%20ORBIO%20ASSIST%2C%20I%27d%20like%20to%20discuss%20virtual%20assistant%20support." target="_blank" rel="noopener" aria-label="Chat with ORBIO ASSIST on WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.4L3 29l7-1.8c1.8 1 3.9 1.500 6 1.500 7.200 0 13-5.700 13-12.800C29 8.700 23.200 3 16 3zm0 23.400c-1.900 0-3.800-.5-5.400-1.500l-.4-.2-4.100 1.100 1.100-4-.3-.4a10.300 10.300 0 0 1-1.600-5.500C5.300 10 10.100 5.400 16 5.400S26.700 10 26.700 15.800 21.900 26.400 16 26.400zm5.800-7.800c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200l-1 1.200c-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.200-.2-.3 0-.5.100-.7l.5-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1.100 1.100-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.300 5.300 4.600.7.300 1.300.5 1.800.7.700.2 1.400.2 2 .1.600-.1 1.900-.8 2.200-1.500.3-.7.300-1.400.2-1.500-.1-.1-.3-.2-.6-.4z"/></svg>
+  </a>
+  <div class="tip" id="waTip">Questions? Chat with us on WhatsApp</div>
+</div>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="m" id="mBody"></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var WEB3FORMS_KEY="3739f11a-dfcb-4aad-90a4-8e9174c6afeb";   // Web3Forms access key (same as Orbio Desk)
+/* ===== SETTINGS: change contact details here, everything on the site updates ===== */
+var CONTACT_EMAIL="info@orbioltd.co.uk";
+var SUPPORT_EMAIL="support@orbioltd.co.uk";
+var PHONE_DISPLAY="07843 862112";
+var PHONE_TEL="07843862112";
+var LANDLINE_DISPLAY="020 8058 0504";
+var LANDLINE_TEL="02080580504";
+var WHATSAPP_NUMBER="447843862112";          // international format, no + or spaces
+var ORBIO_SITE="https://www.orbioltd.co.uk"; // link used by every "View Orbio Site" button
+var ICO_NUMBER="ZC298303";
+var ICO_URL="https://ico.org.uk/ESDWebPages/Entry/ZC298303";
+/* ================================================================================ */
+var HERO_VIDEO="";                                 // optional: path to a looping hero video, e.g. "hero.mp4"
+
+/* ---------- data ---------- */
+var SERVICES=["Administrative Support","Executive & Personal Assistance","Customer Service & Client Support","Lead Generation & Prospect Research","Sales & Business Development Support","CRM & Database Management","E-commerce & Online Store Management","Real Estate & Property Management Support","Automotive & Car Rental Business Support","Social Media Management","Digital Marketing Assistance","Recruitment & HR Administration","Finance & Bookkeeping Administration","Research, Reporting & Data Management","Operations & Project Coordination"].map(function(t){return {t:t};});
+
+var INDUSTRIES=["Real Estate & Property Management","Car Rental Companies","Automotive Dealerships","E-commerce & Online Retail","Marketing & Advertising Agencies","IT & Technology Companies","Professional Services","Recruitment & Staffing Agencies","Financial & Insurance Businesses","Travel & Hospitality Businesses","Healthcare & Wellness Businesses","Education & Training Providers","Construction & Trades Businesses","Consulting & Coaching Businesses","Small & Medium-Sized Enterprises"];
+
+var STEPS=[["Send your enquiry","Tell us about your business and what you need."],["Receive a proposal","We review your requirements and send a tailored proposal."],["Get started","Once agreed, your support begins."]];
+
+
+var PILLARS=[["Professional support","Dependable help, delivered properly."],["Flexible arrangements","From a few hours to a dedicated assistant."],["Clear communication","You always know what is happening."],["Confidential handling","Careful treatment of your information."],["Tailored proposals","Built around your requirements."]];
+
+var FAQS=[
+["What is a virtual assistant?","A virtual assistant supports your business with tasks such as administration, customer messages, research and scheduling."],
+["What services does ORBIO ASSIST provide?","We cover fifteen areas, including administration, customer service, lead generation, CRM, e-commerce, property support, social media and operations."],
+["How much does it cost?","Our rates run from &pound;3.99 to &pound;9.99 per hour, depending on the service and your workload. There is no fixed monthly commitment."],
+["Can I request a service that is not listed?","Yes. Tell us what you need and we will let you know how we can help."],
+["Can I have ongoing or part-time support?","Yes. You pay by the hour, so you can book a few hours or ongoing support as your business needs."],
+["How do I get started?","Send us a proposal request using the form on this page. We will review it and come back to you with a tailored proposal."],
+["How can I contact ORBIO ASSIST?","Email "+CONTACT_EMAIL+" or "+SUPPORT_EMAIL+", call "+PHONE_DISPLAY+" or "+LANDLINE_DISPLAY+", message us on WhatsApp or use the proposal form."]
+];
+
+var LEGAL={
+privacy:["Privacy Policy",[["Who we are","ORBIO ASSIST is a brand operated by ORBIO LTD (Company No. 17473713), registered in the United Kingdom. ORBIO LTD is the controller of personal data collected through this website."],["What we collect","When you send a proposal request we collect the details you provide: your name, company name, company website, email address, telephone number and message."],["How we use it","We use your details only to respond to your enquiry, prepare proposals and manage our business relationship with you."],["Your rights","Under UK GDPR and the Data Protection Act 2018 you can ask to access, correct or delete your personal data. Contact "+CONTACT_EMAIL+"."],["ICO registration","ORBIO LTD is registered with the Information Commissioner's Office (ICO). Registration reference: "+ICO_NUMBER+"."]]],
+cookies:["Cookie Policy",[["Our approach","This website aims to use only what is needed to work. We do not run advertising cookies."],["Third-party services","Fonts are loaded from Google Fonts, and form submissions are processed by Web3Forms. These providers may process technical information such as your IP address."],["Questions","Contact "+CONTACT_EMAIL+"."]]],
+terms:["Terms & Conditions",[["Using this website","The information on this website is for general guidance. Specific services, scope and fees are confirmed in a written proposal agreed between you and ORBIO LTD."],["Our services","ORBIO ASSIST provides virtual assistant and business administration support. We do not provide regulated accounting, tax, legal or financial advice."],["Company details","ORBIO LTD, Company No. 17473713. Registered office: 2 Frederick Street, Kings Cross, London, WC1X 0ND, United Kingdom."]]]
+};
+
+/* ---------- helpers ---------- */
+function $(s,r){return (r||document).querySelector(s);}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+function pad(n){return n<10?"0"+n:""+n;}
+function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+var TICK='<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>';
+
+/* ---------- apply settings ---------- */
+$$(".js-email").forEach(function(a){a.textContent=CONTACT_EMAIL;a.href="mailto:"+CONTACT_EMAIL;});
+$$(".js-email2").forEach(function(a){a.textContent=SUPPORT_EMAIL;a.href="mailto:"+SUPPORT_EMAIL;});
+$$(".js-land").forEach(function(a){a.textContent=LANDLINE_DISPLAY;a.href="tel:"+LANDLINE_TEL;});
+$$(".js-phone").forEach(function(a){a.textContent=PHONE_DISPLAY;a.href="tel:"+PHONE_TEL;});
+$$(".js-orbio").forEach(function(a){a.href=ORBIO_SITE;});
+$$(".js-orbio-text").forEach(function(a){a.href=ORBIO_SITE;a.textContent=ORBIO_SITE.replace(/^https?:\/\//,"");});
+$$(".js-wa").forEach(function(a){var t=a.getAttribute("data-text");a.href="https://wa.me/"+WHATSAPP_NUMBER+(t?"?text="+encodeURIComponent(t):"");});
+$$(".js-ico-link").forEach(function(a){a.href=ICO_URL;});
+
+/* ---------- render sections ---------- */
+$("#homeServiceChips").innerHTML=SERVICES.map(function(s,i){return '<a class="chip" href="#services"><i>'+pad(i+1)+'</i>'+esc(s.t)+'</a>';}).join("");
+var REVIEWS=[{"rating": 5, "name": "Raja Taxi Scotland", "role": "Taxi Dispatching", "text": "Orbio Assist has been handling our booking calls and dispatch support really well. Calls are answered promptly, usually within three rings, and bookings are passed to drivers accurately. Journey updates and customer enquiries are also handled efficiently."}, {"rating": 5, "name": "Royal Nawab", "role": "Restaurant Management", "text": "Orbio Assist has been a great help with handling customer calls, table reservations and enquiries. The team knows how to deal with customers politely, especially when handling complaints or busy periods. It has made our front-desk operations much smoother."}, {"rating": 5, "name": "PFG Group", "role": "Restaurant Operations", "text": "The team has helped us manage incoming calls, takeaway orders, reservation enquiries and customer follow-ups. They communicate clearly with customers and handle busy service periods professionally."}, {"rating": 5, "name": "Taskaler", "role": "E-commerce Management", "text": "Orbio Assist has supported our product research, listing management and order processing. Product hunting has been particularly helpful, and orders and customer queries are handled quickly and accurately."}, {"rating": 5, "name": "Be More Remote", "role": "Property Management", "text": "Orbio Assist has helped with uploading property listings, updating availability, managing enquiries and keeping property records up to date. We also receive regular updates, which makes managing our properties easier."}, {"rating": 5, "name": "Nycto", "role": "IT & Software Support", "text": "Orbio Assist has provided useful support with software administration, CRM updates, system monitoring and managing support requests. Their team keeps records organised and follows up on outstanding tasks."}, {"rating": 5, "name": "Bright Minds BPO", "role": "Operations Management", "text": "Orbio Assist has helped us manage daily operational tasks, maintain records, coordinate workflows and follow up on pending work. Their support has made our back-office processes more organised."}, {"rating": 5, "name": "A&H BPO Services", "role": "Claims Processing", "text": "Orbio Assist has been helpful with completing claim forms, entering customer information, checking supporting documents and updating claim records. Their attention to detail and timely follow-ups have been valuable to our workflow."}];
+function stars(n){var s="";for(var i=1;i<=5;i++){s+=i<=n?"&#9733;":"&#9734;";}return s;}
+if(REVIEWS.length){
+  $("#reviews").innerHTML=REVIEWS.map(function(r){return '<figure class="rev"><div class="stars" aria-label="'+(r.rating||5)+' out of 5 stars">'+stars(r.rating||5)+'</div><blockquote>&ldquo;'+esc(r.text)+'&rdquo;</blockquote><figcaption><b>'+esc(r.name||"Verified client")+'</b>'+(r.role?'<span>'+esc(r.role)+'</span>':'')+'</figcaption></figure>';}).join("");
+  $("#reviewsSection").hidden=false;
+}
+$("#footServices").innerHTML=SERVICES.slice(0,8).map(function(s){return '<li><a href="#services">'+esc(s.t)+'</a></li>';}).join("")+'<li><a href="#services">View all services</a></li>';
+$("#industryChips").innerHTML=INDUSTRIES.map(function(t){return '<span class="chip">'+esc(t)+'</span>';}).join("");
+$("#steps").innerHTML=STEPS.map(function(s){return '<div class="step"><h3>'+esc(s[0])+'</h3><p>'+esc(s[1])+'</p></div>';}).join("");
+$("#svcGrid").innerHTML=SERVICES.map(function(s,i){
+  return '<button type="button" class="svc-card" data-proposal data-service="'+esc(s.t)+'"><span class="num">'+pad(i+1)+'</span><span class="nm">'+esc(s.t)+'</span><span class="go" aria-hidden="true">&rarr;</span></button>';
+}).join("");
+$("#plans").innerHTML='<div class="ptable"><div class="pt-intro"><p><b>From &pound;3.99 to &pound;9.99 per hour.</b> Your rate depends on the service you need and your workload. There is no fixed monthly commitment, so you only pay for the support you need.</p><button class="btn btn-primary" data-proposal data-service="Other / Custom requirement">Request a Proposal</button></div><div class="tbl"><table><thead><tr><th>Service type</th><th>Examples</th><th>Hourly rate</th></tr></thead><tbody>'+[["Everyday support","Inbox, diary, data entry, document preparation","&pound;3.99 to &pound;5.99 per hour"],["Customer and sales support","Enquiries, follow-ups, lead research, bookings","&pound;5.99 to &pound;7.99 per hour"],["Specialist support","CRM, e-commerce, reporting, operations","&pound;7.99 to &pound;9.99 per hour"],["Dedicated assistant","A dedicated assistant, including optional 24/7 live monitoring","Custom quote"]].map(function(r){return '<tr><td><b>'+r[0]+'</b></td><td>'+r[1]+'</td><td>'+r[2]+'</td></tr>';}).join("")+'</tbody></table></div></div>';
+$("#pillars").innerHTML=PILLARS.map(function(p,i){
+  return '<div class="pillar"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1459a8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><h3>'+esc(p[0])+'</h3><p>'+esc(p[1])+'</p></div>';
+}).join("");
+$$(".faq-list").forEach(function(el){
+  el.innerHTML=FAQS.map(function(f){return '<details><summary>'+esc(f[0])+'</summary><p>'+esc(f[1])+'</p></details>';}).join("");
+});
+var sel=$("#f-service");
+sel.innerHTML='<option value="">Select your industry or service (optional)</option>'+SERVICES.map(function(s){return '<option>'+esc(s.t)+'</option>';}).join("")+'<option>Other / Custom requirement</option><option>Not sure yet</option>';
+
+$$(".ico").forEach(function(el){el.textContent=ICO_NUMBER||"Pending";});
+
+/* ---------- routing ---------- */
+var PAGES=["home","services","about"];
+var TITLES={"home":"ORBIO ASSIST | Virtual Assistant & Business Support UK","services":"Our Services | ORBIO ASSIST","about":"About Us | ORBIO ASSIST"};
+var ALIAS={industries:["services","industries"],"why-us":["about","why-us"],pricing:["services","pricing"],contact:[null,"proposal"]};
+var current="home";
+function route(){
+  var h=(location.hash||"#home").slice(1),page,target=null;
+  if(ALIAS[h]){page=ALIAS[h][0]||current;target=ALIAS[h][1];}
+  else{if(PAGES.indexOf(h)<0)h="home";page=h;}
+  current=page;
+  PAGES.forEach(function(p){$("#p-"+p).hidden=(p!==page);});
+  $$("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("data-p")===h);});
+  $("#nav").classList.remove("open");$("#burger").setAttribute("aria-expanded","false");
+  try{document.title=TITLES[page];}catch(e){}
+  if(target){setTimeout(function(){var el=document.getElementById(target);if(el)el.scrollIntoView({behavior:"smooth",block:"start"});},80);}
+  else{window.scrollTo(0,0);}
+}
+window.addEventListener("hashchange",route);route();
+$("#burger").addEventListener("click",function(){var o=$("#nav").classList.toggle("open");this.setAttribute("aria-expanded",o?"true":"false");});
+
+/* ---------- proposal buttons ---------- */
+document.addEventListener("click",function(e){
+  var b=e.target.closest("[data-proposal]");
+  if(b){
+    e.preventDefault();
+    var s=b.getAttribute("data-service");if(s){sel.value=s;}
+    var plan=b.getAttribute("data-plan");
+    if(plan){var m=$("#f-msg");if(!m.value)m.value="I am interested in the "+plan+" plan.";}
+    $("#proposal").scrollIntoView({behavior:"smooth",block:"start"});
+    setTimeout(function(){try{$("#f-name").focus({preventScroll:true});}catch(x){}},500);
+    return;
+  }
+  var l=e.target.closest("[data-legal]");
+  if(l){openLegal(l.getAttribute("data-legal"));}
+});
+
+/* ---------- legal modal ---------- */
+function openLegal(k){
+  var d=LEGAL[k];if(!d)return;
+  $("#mBody").innerHTML='<h3>'+esc(d[0])+'</h3>'+d[1].map(function(x){return '<h4>'+esc(x[0])+'</h4><p>'+esc(x[1])+'</p>';}).join("")+'<button class="btn btn-primary btn-sm" id="mClose" style="justify-self:start">Close</button>';
+  $("#modal").hidden=false;$("#mClose").focus();
+  $("#mClose").addEventListener("click",function(){$("#modal").hidden=true;});
+}
+$("#modal").addEventListener("click",function(e){if(e.target===this)this.hidden=true;});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")$("#modal").hidden=true;});
+
+/* ---------- form ---------- */
+var form=$("#proposalForm"),msg=$("#formMsg"),btn=$("#sendBtn");
+function showMsg(t,c){msg.textContent=t;msg.className="msg "+c;msg.hidden=false;}
+var sending=false,EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+form.addEventListener("submit",function(e){
+  e.preventDefault();
+  if(sending)return;
+  msg.hidden=true;
+  var em=$("#f-email");
+  if(!EMAIL_RE.test(em.value.trim())){em.setCustomValidity("Please enter a valid email address.");}else{em.setCustomValidity("");}
+  if(!form.checkValidity()){form.reportValidity();return;}
+  if(form.botcheck&&form.botcheck.checked){return;}
+  sending=true;btn.disabled=true;btn.textContent="Sending…";
+  var fd=new FormData(form);
+  fd.set("access_key",WEB3FORMS_KEY);
+  fd.set("subject","New Proposal – Orbio Assist (Virtual Assistant)");
+  fd.set("from_name","ORBIO ASSIST website");
+  fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Accept":"application/json"},body:fd}).then(function(r){return r.json();}).then(function(j){
+    if(j&&j.success){form.reset();showMsg("Thank you. Your proposal request has been sent. We will review it and get back to you shortly.","ok");}
+    else{throw new Error("fail");}
+  }).catch(function(){showMsg("Sorry, your proposal could not be sent. Please try again, or email "+CONTACT_EMAIL+" or call "+PHONE_DISPLAY+".","err");})
+  .then(function(){sending=false;btn.disabled=false;btn.textContent="Send Proposal";});
+});
+$("#f-email").addEventListener("input",function(){this.setCustomValidity("");});
+
+/* ---------- WhatsApp tip ---------- */
+setTimeout(function(){var t=$("#waTip");t.classList.add("show");setTimeout(function(){t.classList.remove("show");},6000);},3500);
+
+/* ---------- hero video (optional) ---------- */
+if(HERO_VIDEO){
+  var v=document.createElement("video");v.className="hero-video";v.src=HERO_VIDEO;v.autoplay=true;v.muted=true;v.loop=true;v.playsInline=true;v.setAttribute("aria-hidden","true");
+  $(".hero").insertBefore(v,$(".hero").firstChild);
+}
+
+/* ---------- live phone mock-up ---------- */
+(function(){
+  var list=$("#taskList");if(!list)return;
+  var POOL=[["Chase supplier invoice","Today, 10:30"],["Confirm property viewing","Today, 11:15"],["Update CRM with 14 new contacts","Today, 12:00"],["Reply to customer enquiries","Today, 13:30"],["Schedule next week's social posts","Today, 14:00"],["Prepare monthly report","Today, 15:00"],["Book travel for client meeting","Tomorrow, 09:00"],["Qualify 20 new leads","Tomorrow, 10:30"],["Process Shopify orders","Today, 16:30"],["Arrange diary for Monday","Tomorrow, 11:00"]];
+  var TOASTS=["Appointment booked: Tue 10:30","CRM updated with 14 new contacts","Invoice reminder sent","Viewing confirmed: Wed 11:15","Weekly report sent for review","Customer enquiry answered"];
+  var UPDATES=["Social media calendar for next month completed and sent for your review.","14 new leads researched and added to your CRM.","Customer enquiries cleared, 3 follow-ups scheduled.","Monthly report prepared and ready for approval.","Supplier invoices chased, 2 payments confirmed."];
+  var BOOKINGS=["Weekly check-in · Mon 10:00","Client onboarding call · Tue 14:30","Property viewing · Wed 11:15","Supplier call · Thu 09:30","Team catch-up · Fri 12:00"];
+  var rows=[],pi=0,phase=0,ti=0,ui=0,bi=0,mins=865;
+  var ring=$("#ringFg"),hrs=$("#hrs"),pct=$("#pct"),upTxt=$("#upTxt"),upAgo=$("#upAgo"),bkTxt=$("#bkTxt"),bkPill=$("#bkPill"),toast=$("#toast"),toastTxt=$("#toastTxt");
+
+  function addRow(){
+    var d=POOL[pi++%POOL.length];
+    var el=document.createElement("div");el.className="t-row enter is-new";
+    el.innerHTML='<span class="chk">'+TICK+'</span><span class="t-main"><b class="t-title">'+esc(d[0])+'</b><small>'+esc(d[1])+'</small></span><span class="pill new">New</span>';
+    list.insertBefore(el,list.firstChild);
+    rows.unshift({el:el,state:"new"});
+    while(rows.length>5){var old=rows.pop();old.el.classList.add("out");(function(o){setTimeout(function(){if(o.el.parentNode)o.el.parentNode.removeChild(o.el);},450);})(old);}
+  }
+  function setState(r,s){
+    r.state=s;var p=r.el.querySelector(".pill");
+    r.el.classList.toggle("is-new",s==="new");r.el.classList.toggle("is-done",s==="done");
+    p.className="pill "+(s==="new"?"new":s==="prog"?"prog":"done");
+    p.textContent=s==="new"?"New":s==="prog"?"In progress":"Completed";
+  }
+  function oldest(state){for(var i=rows.length-1;i>=0;i--){if(rows[i].state===state)return rows[i];}return null;}
+  function swap(el,txt){el.classList.add("fade");setTimeout(function(){el.textContent=txt;el.classList.remove("fade");},300);}
+  function hoursUI(){
+    mins+=4;if(mins>1180)mins=520;
+    var h=Math.floor(mins/60),m=mins%60,p=Math.round(mins/12);
+    hrs.textContent=h+"h "+pad(m)+"m";pct.textContent=p+"%";ring.setAttribute("stroke-dasharray",p+" 100");
+  }
+  function step(){
+    if(document.hidden)return;
+    if(phase===0){addRow();bkPill.className="pill prog";bkPill.textContent="Booking…";bi++;swap(bkTxt,BOOKINGS[bi%BOOKINGS.length]);}
+    else if(phase===1){var n=oldest("new");if(n)setState(n,"prog");}
+    else if(phase===2){var g=oldest("prog");if(g)setState(g,"done");bkPill.className="pill done";bkPill.textContent="Booked ✓";}
+    else{
+      toast.classList.add("fade");setTimeout(function(){toastTxt.textContent=TOASTS[ti++%TOASTS.length];toast.classList.remove("fade");},300);
+      ui++;swap(upTxt,UPDATES[ui%UPDATES.length]);upAgo.textContent=(ui%3)+1+" min ago";
+      var g2=oldest("prog")||oldest("new");if(g2)setState(g2,g2.state==="new"?"prog":"done");
+    }
+    hoursUI();
+    phase=(phase+1)%4;
+  }
+  addRow();addRow();addRow();
+  setState(rows[2],"done");setState(rows[1],"prog");
+  if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){setInterval(step,1100);}
+})();
+})();
+</script>
+
+</body>
+</html>

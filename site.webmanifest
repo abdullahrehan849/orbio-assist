@@ -1,0 +1,10 @@
+{
+  "name": "ORBIO ASSIST",
+  "short_name": "ORBIO ASSIST",
+  "description": "Virtual assistant and business support for UK businesses.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#1459a8",
+  "icons": [{"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml"}]
+}
