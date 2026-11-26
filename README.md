@@ -8,6 +8,7 @@ Website for ORBIO ASSIST, a virtual assistant and business support brand operate
 | --- | --- |
 | `index.html` | The whole website (HTML, CSS and JavaScript in one file) |
 | `favicon.svg`, `site.webmanifest` | Browser icon and basic site details |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
 | `404.html` | Page shown for unknown addresses |
 | `robots.txt`, `sitemap.xml` | Search engine files (see step 3 below) |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
