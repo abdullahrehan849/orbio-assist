@@ -4,12 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Orbio Assist | Virtual Assistant &amp; Business Support for UK Businesses</title>
-<meta name="description" content="Dedicated virtual assistant for UK businesses - inbox, diary, customers, CRM, admin. UK registered, ICO registered. 10 hours free trial.">
-<meta name="theme-color" content="#0a1931">
+<meta name="description" content="Dedicated virtual assistant for UK businesses - inbox, diary, customers, CRM, admin. UK registered, ICO registered.">
+<meta name="theme-color" content="#1459a8">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Orbio Assist | Virtual Assistant &amp; Business Support for UK Businesses">
 <meta property="og:description" content="Professional, flexible virtual assistant and business support services for UK businesses. Request a tailored proposal.">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20261127">
+<link rel="alternate icon" href="assets/favicon.ico?v=20261127" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png?v=20261127">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20261127">
 <link rel="manifest" href="site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ORBIO ASSIST","legalName":"ORBIO LTD","description":"Dedicated virtual assistant and business support for UK businesses.","email":"info@orbioltd.co.uk","telephone":"+442080580504","address":{"@type":"PostalAddress","streetAddress":"2 Frederick Street, Kings Cross","addressLocality":"London","postalCode":"WC1X 0ND","addressCountry":"GB"},"areaServed":"GB","priceRange":"From £3.99 per hour"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -581,6 +584,38 @@ footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{font-size:1.1r
 .legal-links a{color:#fff;text-decoration:underline;font-weight:600;margin-right:20px;display:inline-block;padding-block:4px}
 .consent a{color:#1459a8;text-decoration:underline}
 .hero h1{font-weight:800!important}
+
+/* ---- polish pass ---- */
+.btn-outline{background:#fff;color:#1459a8;border:2px solid #1459a8}
+.btn-outline:hover{background:#eaf4fc}
+.cta-row{flex-wrap:wrap;align-items:center;gap:12px 16px}
+.btn-leaf{background:#1459a8!important;color:#fff!important}
+.btn-leaf:hover{background:#0f4a8e!important}
+.stats{background:#fff;border-bottom:1px solid #d5e3f1}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding-block:28px}
+.stats .wrap>div{text-align:center;padding:6px 14px;border-left:1px solid #d5e3f1}
+.stats .wrap>div:first-child{border-left:0}
+.stats b{display:block;font-size:clamp(1.6rem,3vw,2.2rem);color:#1459a8;line-height:1.15;font-weight:800}
+.stats span{display:block;color:#3a4a5e;font-size:.95rem;margin-top:4px}
+@media(max-width:700px){.stats .wrap{grid-template-columns:1fr 1fr;gap:16px 0}.stats .wrap>div:nth-child(3){border-left:0}}
+.call-line{margin:4px 0 14px}
+.linkbtn{background:none;border:0;padding:0;font:inherit;font-weight:700;color:#1459a8;text-decoration:underline;cursor:pointer}
+.ind-grid{display:flex!important;flex-wrap:wrap;justify-content:center;gap:12px}
+.ind-grid>*{flex:0 0 calc(25% - 9px);min-width:0}
+@media(max-width:1000px){.ind-grid>*{flex-basis:calc(50% - 6px)}}
+@media(max-width:420px){.ind-grid>*{flex-basis:calc(50% - 5px)}}
+#reviews{grid-template-columns:repeat(4,1fr)!important}
+@media(max-width:1100px){#reviews{grid-template-columns:1fr 1fr!important}}
+@media(max-width:600px){#reviews{grid-template-columns:1fr!important}}
+.faq{grid-template-columns:1fr!important;max-width:820px!important;margin-inline:auto}
+.msg.ok{line-height:1.6;font-size:1rem;padding:16px 18px}
+section{scroll-margin-top:84px}
+.hero h1{margin-bottom:18px!important}
+.hero .cta-row{margin-top:6px}
+.hero .hero-link{flex-basis:100%;padding:0!important;margin:2px 0 0}
+.hero-trust{margin-top:18px!important}
+.hero .tagline{margin-bottom:24px!important}
+section.stats{padding-block:0!important}
 </style>
 
 </head>
@@ -619,10 +654,11 @@ footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{font-size:1.1r
           <h1>Your UK Business, <span class="blue">Run Without You</span> Doing The Boring Work.</h1>
           <p class="tagline">One dedicated assistant for inbox, diary, customers, CRM and admin. You focus on growth, we handle the rest. Live in 72 hours.</p>
           <div class="cta-row">
-            <button class="btn btn-primary" data-proposal>Get My Free Proposal</button>
+            <button class="btn btn-primary" data-proposal>Send My Enquiry</button>
+            <button class="btn btn-outline" data-call>Book a 15-Minute Call</button>
             <a class="hero-link" href="#pricing">See Bundles &amp; Pricing &rarr;</a>
           </div>
-          <p class="hero-trust"><span>Dedicated Assistant</span><span>No Long Contract</span><span>10 Hours Free Trial</span></p>
+          <p class="hero-trust"><span>Dedicated Assistant</span><span>No Long Contract</span></p>
         </div>
         <div class="phones" aria-label="Illustrative preview of a client dashboard that updates as tasks are completed">
           <div class="live"><i class="dot"></i>Live preview</div>
@@ -668,12 +704,25 @@ footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{font-size:1.1r
   <div class="checks"><div class="wrap">
     <span>UK registered company: 17473713</span>
     <span>ICO registered: <span class="ico">ZC298303</span></span>
-    <span>UK data protection law</span>
+    <span>UK GDPR compliant</span>
     <span>Dedicated assistant</span>
     <span>No long contract</span>
   </div></div>
 
-  <div class="offer"><div class="wrap"><b>Launch Offer:</b> first 10 UK businesses get 10 hours free. <a href="#proposal" data-proposal>Claim yours</a></div></div>
+  <section class="stats" aria-label="Orbio Assist at a glance"><div class="wrap">
+    <div><b>72 hrs</b><span>From agreement to go-live</span></div>
+    <div><b>2 hrs</b><span>Reply time in UK working hours</span></div>
+    <div><b>15</b><span>Services covered</span></div>
+    <div><b>&pound;3.99</b><span>Starting hourly rate, ex VAT</span></div>
+  </div></section>
+
+  <section class="mon" id="live-monitoring">
+    <div class="wrap">
+      <h2>Live monitoring</h2>
+      <p>If you wish, you can watch your assigned assistant at work in real time and see your tasks being handled. Live monitoring is an optional extra and is charged separately.</p>
+      <figure class="live-card"><span class="live-badge"><i></i>LIVE</span><img src="assets/live-monitoring.jpg?v=20261127" alt="An ORBIO ASSIST workstation" width="900" height="1200" loading="lazy"></figure>
+    </div>
+  </section>
 
   <section id="bundles">
     <div class="wrap">
@@ -705,7 +754,7 @@ footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{font-size:1.1r
     <div class="wrap">
       <div class="sec-head"><span class="kicker">Pricing</span><h2>Simple hourly pricing</h2></div>
       <div class="pcards" id="plans"></div>
-      <p class="fine">Prices are per hour and exclude VAT where applicable. No fixed monthly commitment. Specialist work such as CRM, e-commerce and reporting is quoted at up to &pound;9.99 per hour. Your written proposal confirms the rate and scope. 10 hours free trial for the first 10 businesses.</p>
+      <p class="fine">Prices are per hour and exclude VAT where applicable. No fixed monthly commitment. Specialist work such as CRM, e-commerce and reporting is quoted at up to &pound;9.99 per hour. Your written proposal confirms the rate and scope.</p>
     </div>
   </section>
 
@@ -714,14 +763,6 @@ footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{font-size:1.1r
       <div class="sec-head"><span class="kicker">Why ORBIO ASSIST</span><h2>What you get</h2></div>
       <div class="pillars why6" id="whyCards"></div>
       <div class="guarantee"><b>Week 1 Guarantee</b><span>If your assistant misses a deadline in the first week, we replace them free.</span></div>
-    </div>
-  </section>
-
-  <section class="mon" id="live-monitoring">
-    <div class="wrap">
-      <h2>Live monitoring</h2>
-      <p>If you wish, you can watch your assigned assistant at work in real time and see your tasks being handled. Live monitoring is an optional extra and is charged separately.</p>
-      <figure class="live-card"><span class="live-badge"><i></i>LIVE</span><img src="assets/live-monitoring.jpg" alt="An ORBIO ASSIST workstation" width="900" height="1200" loading="lazy"></figure>
     </div>
   </section>
 
@@ -844,6 +885,7 @@ footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{font-size:1.1r
       <span class="kicker">Send Your Proposal</span>
       <h2>Get your free proposal</h2>
       <p>Tell us a little about your business and what you need help with. We will come back to you with a tailored proposal.</p>
+      <p class="call-line">Prefer to talk first? <button type="button" class="linkbtn" data-call>Book a 15-minute call</button></p>
       <div class="contact-lines">
         <div><span>Email</span><a class="js-email" href="mailto:info@orbioltd.co.uk">info@orbioltd.co.uk</a><br><a class="js-email2" href="mailto:support@orbioltd.co.uk">support@orbioltd.co.uk</a></div>
         <div><span>Telephone</span><a class="js-phone" href="tel:07843862112">07843 862112</a></div>
@@ -868,7 +910,7 @@ footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{font-size:1.1r
         <select id="f-service" name="service" hidden aria-hidden="true" tabindex="-1"></select>
         <label for="f-msg">What do you need help with?<textarea id="f-msg" name="message" placeholder="Tell us a little about your business and the support you need." required></textarea></label>
         <div class="msg" id="formMsg" role="status" aria-live="polite" hidden></div>
-        <button class="btn btn-primary" id="sendBtn" type="submit">Get My Free Proposal</button>
+        <button class="btn btn-primary" id="sendBtn" type="submit">Send My Enquiry</button>
         <p class="reply-note">We reply within 2 hours in UK working hours. Your details are handled under UK data protection law.</p>
         <p class="consent">By sending this form you agree that ORBIO LTD may contact you about your enquiry. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
       </form>
@@ -887,7 +929,7 @@ footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{font-size:1.1r
       <span><small>Company Name</small><b>ORBIO LTD</b></span>
       <span><small>Company Number</small><b>17473713</b></span>
       <span><small>ICO Registration Number</small><b><a class="js-ico-link" href="https://ico.org.uk/ESDWebPages/Entry/ZC298303" target="_blank" rel="noopener"><span class="ico">ZC298303</span></a></b></span>
-      <span><small>Data Protection</small><b>UK data protection law</b></span>
+      <span><small>Data Protection</small><b>UK GDPR compliant</b></span>
       <span><small>Registered Office</small><b>2 Frederick Street, Kings Cross, London, WC1X 0ND</b></span>
     </div>
   </div></div>
@@ -941,6 +983,7 @@ footer .f-reg-in b,footer .f-reg-in b a,footer .f-reg-in b a span{font-size:1.1r
 <script>
 (function(){
 "use strict";
+var BOOKING_URL="";   // Optional: paste your Calendly (or similar) link here. If empty, "Book a 15-Minute Call" opens the enquiry form with a call request.
 var WEB3FORMS_KEY="3739f11a-dfcb-4aad-90a4-8e9174c6afeb";   // Web3Forms access key (same as Orbio Desk)
 /* ===== SETTINGS: change contact details here, everything on the site updates ===== */
 var CONTACT_EMAIL="info@orbioltd.co.uk";
@@ -962,7 +1005,7 @@ var BUNDLES=[
 {t:"Customers & Sales",d:"Reply faster and follow up on every lead.",items:["Customer service","Lead generation","Follow-ups","Sales and business development support"],more:["Customer Service & Client Support","Lead Generation & Prospect Research","Sales & Business Development Support"]},
 {t:"Growth & Business",d:"Support for the wider running of your business.",items:["E-commerce","Real estate","Recruitment and HR","Finance and bookkeeping admin","Operations and project coordination","Social media and digital marketing"],more:["E-commerce & Online Store Management","Real Estate & Property Management Support","Automotive & Car Rental Business Support","Recruitment & HR Administration","Finance & Bookkeeping Administration","Operations & Project Coordination","Social Media Management","Digital Marketing Assistance"]}
 ];
-var WHY=[["UK registered","ORBIO LTD, company number 17473713, ICO registered."],["Dedicated, not shared","Your own assistant who gets to know your business."],["Backup if sick","Cover arranged if your assistant is unavailable."],["Daily report","A short summary of what has been done."],["Your data stays with you","Handled with care under UK data protection law."],["Live monitoring optional","Watch your assistant at work, as an optional extra."]];
+var WHY=[["UK registered","ORBIO LTD, company number 17473713, ICO registered."],["Dedicated, not shared","Your own assistant who gets to know your business."],["Backup if sick","Cover arranged if your assistant is unavailable."],["Daily report","A short summary of what has been done."],["Your data stays with you","Handled with care under UK GDPR."],["Live monitoring optional","Watch your assistant at work, as an optional extra."]];
 var SERVICES=["Administrative Support","Executive & Personal Assistance","Customer Service & Client Support","Lead Generation & Prospect Research","Sales & Business Development Support","CRM & Database Management","E-commerce & Online Store Management","Real Estate & Property Management Support","Automotive & Car Rental Business Support","Social Media Management","Digital Marketing Assistance","Recruitment & HR Administration","Finance & Bookkeeping Administration","Research, Reporting & Data Management","Operations & Project Coordination"].map(function(t){return {t:t};});
 
 var INDUSTRIES=["Real Estate","Car Rental","E-commerce","Marketing Agencies","IT","Professional Services","Recruitment","Financial & Insurance","Travel","Healthcare","Education","Construction","Consulting","SMEs"];
@@ -975,7 +1018,7 @@ var PILLARS=[["Professional support","Dependable help, delivered properly."],["F
 var FAQS=[
 ["How fast can we start?","Once your proposal is agreed, your support can go live within 72 hours."],
 ["What if I do not like my assistant?","Tell us and we will put it right, including arranging a replacement assistant where needed."],
-["Is my data safe?","We handle business information with care and in line with UK data protection law. ORBIO LTD is registered with the ICO (ZC298303)."],
+["Is my data safe?","ORBIO LTD is UK GDPR compliant and handles business information with care. ORBIO LTD is registered with the ICO (ZC298303)."],
 ["Do you sign an NDA?","Yes. We can sign a confidentiality agreement on request."],
 ["Can I cancel?","Yes. There is no long contract. You pay for the hours you use and can stop at any time."],
 ["How much does it cost?","Our rates start from £3.99 per hour and go up to £9.99 per hour for specialist work. There is no fixed monthly commitment."],
@@ -1016,7 +1059,7 @@ $("#steps").innerHTML=STEPS.map(function(s){return '<div class="step"><h3>'+esc(
 $("#svcGrid").innerHTML=SERVICES.map(function(s,i){
   return '<button type="button" class="svc-card" data-proposal data-service="'+esc(s.t)+'"><span class="num">'+pad(i+1)+'</span><span class="nm">'+esc(s.t)+'</span><span class="go" aria-hidden="true">&rarr;</span></button>';
 }).join("");
-$("#plans").innerHTML=[["Everyday Support","From &pound;3.99","/ hour","Inbox, diary, data entry and document preparation.","Everyday Support",""],["Customer & Sales Support","From &pound;5.99","/ hour","Enquiries, follow-ups, lead research and bookings.","Customer & Sales Support","pop"],["Dedicated Assistant","Custom quote","","Your own assistant, with optional 24/7 live monitoring.","Dedicated Assistant",""]].map(function(c){return '<div class="pcard'+(c[5]?' pop':'')+'">'+(c[5]?'<span class="pop-tag">MOST POPULAR</span>':'')+'<h3>'+esc(c[0])+'</h3><div class="pc-price">'+c[1]+(c[2]?' <small>'+c[2]+'</small>':'')+'</div><p>'+esc(c[3])+'</p><button class="btn '+(c[5]?'btn-primary':'btn-line')+'" data-proposal data-plan="'+esc(c[4])+'">Get My Free Proposal</button></div>';}).join("");
+$("#plans").innerHTML=[["Everyday Support","From &pound;3.99","/ hour","Inbox, diary, data entry and document preparation.","Everyday Support",""],["Customer & Sales Support","From &pound;5.99","/ hour","Enquiries, follow-ups, lead research and bookings.","Customer & Sales Support","pop"],["Dedicated Assistant","Custom quote","","Your own assistant, with optional 24/7 live monitoring.","Dedicated Assistant",""]].map(function(c){return '<div class="pcard'+(c[5]?' pop':'')+'">'+(c[5]?'<span class="pop-tag">MOST POPULAR</span>':'')+'<h3>'+esc(c[0])+'</h3><div class="pc-price">'+c[1]+(c[2]?' <small>'+c[2]+'</small>':'')+'</div><p>'+esc(c[3])+'</p><button class="btn '+(c[5]?'btn-primary':'btn-line')+'" data-proposal data-plan="'+esc(c[4])+'">Send My Enquiry</button></div>';}).join("");
 $("#pillars").innerHTML=PILLARS.map(function(p,i){
   return '<div class="pillar"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1459a8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><h3>'+esc(p[0])+'</h3><p>'+esc(p[1])+'</p></div>';
 }).join("");
@@ -1050,6 +1093,15 @@ $("#burger").addEventListener("click",function(){var o=$("#nav").classList.toggl
 
 /* ---------- proposal buttons ---------- */
 document.addEventListener("click",function(e){
+  var c=e.target.closest("[data-call]");
+  if(c){
+    e.preventDefault();
+    if(BOOKING_URL){window.open(BOOKING_URL,"_blank","noopener");return;}
+    var m2=$("#f-msg");if(!m2.value)m2.value="I would like a 15-minute call. Best time to reach me: ";
+    $("#proposal").scrollIntoView({behavior:"smooth",block:"start"});
+    setTimeout(function(){try{$("#f-name").focus({preventScroll:true});}catch(x){}},500);
+    return;
+  }
   var b=e.target.closest("[data-proposal]");
   if(b){
     e.preventDefault();
@@ -1080,11 +1132,12 @@ form.addEventListener("submit",function(e){
   fd.set("access_key",WEB3FORMS_KEY);
   fd.set("subject","New Proposal – Orbio Assist (Virtual Assistant)");
   fd.set("from_name","ORBIO ASSIST website");
+  fd.set("replyto",($("#f-email").value||"").trim());
   fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Accept":"application/json"},body:fd}).then(function(r){return r.json();}).then(function(j){
-    if(j&&j.success){form.reset();showMsg("Thank you. Your proposal request has been sent. We will review it and get back to you shortly.","ok");}
+    if(j&&j.success){form.reset();showMsg("Thank you, your enquiry has been received. A member of the ORBIO ASSIST team will reply within 2 hours in UK working hours. If it is urgent, call "+PHONE_DISPLAY+" or message us on WhatsApp.","ok");}
     else{throw new Error("fail");}
   }).catch(function(){showMsg("Sorry, your proposal could not be sent. Please try again, or email "+CONTACT_EMAIL+" or call "+PHONE_DISPLAY+".","err");})
-  .then(function(){sending=false;btn.disabled=false;btn.textContent="Get My Free Proposal";});
+  .then(function(){sending=false;btn.disabled=false;btn.textContent="Send My Enquiry";});
 });
 $("#f-email").addEventListener("input",function(){this.setCustomValidity("");});
 
