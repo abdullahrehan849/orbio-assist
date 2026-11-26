@@ -13,7 +13,7 @@ Website for ORBIO ASSIST, a virtual assistant and business support brand operate
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 | `vercel.json` | Optional settings if you host on Vercel |
 | `.well-known/security.txt` | Security contact |
-| `assets/` | Spare folder for future images or video |
+| `assets/` | Images used on the site (`live-monitoring.jpg`) |
 
 ## Settings (inside `index.html`)
 
