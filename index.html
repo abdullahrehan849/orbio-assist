@@ -9,12 +9,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Orbio Assist | Virtual Assistant &amp; Business Support for UK Businesses">
 <meta property="og:description" content="Professional, flexible virtual assistant and business support services for UK businesses. Request a tailored proposal.">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20261127">
-<link rel="alternate icon" href="assets/favicon.ico?v=20261127" sizes="48x48">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png?v=20261127">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20261127">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg?v=20261127">
+<link rel="alternate icon" href="assets/icons/favicon.ico?v=20261127" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png?v=20261127">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=20261127">
 <link rel="manifest" href="site.webmanifest">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ORBIO ASSIST","legalName":"ORBIO LTD","description":"Dedicated virtual assistant and business support for UK businesses.","email":"info@orbioltd.co.uk","telephone":"+442080580504","address":{"@type":"PostalAddress","streetAddress":"2 Frederick Street, Kings Cross","addressLocality":"London","postalCode":"WC1X 0ND","addressCountry":"GB"},"areaServed":"GB","priceRange":"From £3.99 per hour"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ORBIO ASSIST","legalName":"ORBIO LTD","description":"Dedicated virtual assistant and business support for UK businesses.","email":"info@orbioltd.co.uk","telephone":"+442080580504","address":{"@type":"PostalAddress","streetAddress":"2 Frederick Street, Kings Cross","addressLocality":"London","postalCode":"WC1X 0ND","addressCountry":"GB"},"areaServed":"GB"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap">
@@ -616,8 +616,129 @@ section{scroll-margin-top:84px}
 .hero-trust{margin-top:18px!important}
 .hero .tagline{margin-bottom:24px!important}
 section.stats{padding-block:0!important}
-</style>
+.pcards{grid-template-columns:repeat(2,1fr)!important;max-width:860px;margin-inline:auto}
+@media(max-width:1000px){.pcards{grid-template-columns:1fr!important}}
 
+.lv-points{list-style:none;margin:0 auto;padding:0;max-width:880px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left}
+.lv-points li{background:#fff;border:1px solid #d5e3f1;border-radius:12px;padding:18px 18px 16px;box-shadow:0 8px 22px rgba(10,25,49,.07)}
+.lv-points b{display:block;color:#0a2a4a;font-size:1.02rem;margin-bottom:6px}
+.lv-points span{color:#3a4a5e;font-size:.95rem;line-height:1.5}
+@media(max-width:800px){.lv-points{grid-template-columns:1fr}}
+.mon .live-card{margin:0 auto 28px}
+
+.band-btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.pcards{grid-template-columns:1fr!important;max-width:560px!important}
+.pc-btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---- digital business card ---- */
+#bizcard{padding-block:10px}
+.bc-panel{position:relative;width:100%;max-width:900px;margin:0 auto;display:flex;align-items:center;gap:clamp(16px,4vw,44px);text-align:left;cursor:pointer;font-family:inherit;color:#0a2a4a;border:1.5px solid #ecd98a;border-radius:20px;padding:22px clamp(18px,4vw,40px);background:linear-gradient(135deg,#fffbea,#fdf0c4 60%,#fff6d6);box-shadow:0 12px 30px rgba(180,140,20,.16);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.bc-panel:hover,.bc-panel:focus-visible{transform:translateY(-3px);box-shadow:0 18px 38px rgba(180,140,20,.26);outline:3px solid #1459a8;outline-offset:3px}
+.bc-stagebox{flex:0 0 auto;width:clamp(150px,26vw,230px);display:block;perspective:900px}
+.bc-stage{position:relative;display:block;width:100%;aspect-ratio:7/5;transform-style:preserve-3d}
+.bc-spin{position:absolute;left:50%;top:50%;width:78%;aspect-ratio:7/4;margin:-22% 0 0 -39%;display:block;transform-style:preserve-3d;animation:bcSpin 5s linear infinite,bcBob 2.5s ease-in-out infinite}
+.bc-tilt{position:absolute;inset:0;display:block;transform-style:preserve-3d;transform:rotateZ(-34deg)}
+.bc-face{position:absolute;inset:0;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1.5px solid #d8b878;background:linear-gradient(145deg,#1b1b1e,#08080a 55%,#151517);box-shadow:inset 0 0 0 4px #0a0a0b,inset 0 0 0 5px rgba(216,184,120,.4),0 10px 22px rgba(60,40,0,.35)}
+.bc-face svg{width:30%;filter:drop-shadow(0 0 5px rgba(216,184,120,.6))}
+.bc-face i{font-style:normal;font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:.2em;font-size:clamp(11px,2.3vw,17px);background:linear-gradient(100deg,#9a7b3f,#f3e3b5 45%,#fff 52%,#d8b878 70%,#9a7b3f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bc-back{transform:rotateY(180deg)}
+.bc-back em{font-style:italic;font-family:Georgia,serif;font-size:clamp(6px,1.3vw,9px);color:#d8b878;text-align:center;padding-inline:10%}
+.bc-shadow{position:absolute;left:50%;bottom:4%;width:56%;height:9%;margin-left:-28%;border-radius:50%;background:radial-gradient(ellipse,rgba(80,55,0,.45),transparent 70%);animation:bcShadow 2.5s ease-in-out infinite}
+@keyframes bcSpin{to{transform:rotateY(360deg)}}
+@keyframes bcBob{0%,100%{margin-top:-22%}50%{margin-top:-25%}}
+@keyframes bcShadow{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(.8);opacity:.6}}
+.bc-copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.bc-copy small{font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#a07a12}
+.bc-copy b{font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.2;color:#0a2a4a}
+.bc-copy span{color:#3a4a5e;font-size:1rem;line-height:1.5}
+.bc-copy .bc-tap{align-self:flex-start;margin-top:8px;font-weight:800;font-size:.95rem;letter-spacing:.05em;color:#3a2d00;background:linear-gradient(135deg,#f9de76,#f1c93f);border:1px solid #e0b92e;border-radius:999px;padding:11px 24px;box-shadow:0 6px 14px rgba(200,150,10,.28)}
+.bc-panel:hover .bc-tap{background:linear-gradient(135deg,#fde88c,#f5d150)}
+@media(max-width:560px){.bc-panel{flex-direction:column;text-align:center;padding:20px 16px}.bc-stagebox{width:210px}.bc-copy{align-items:center}.bc-copy .bc-tap{align-self:center}}
+.bc-ov{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:max(12px,env(safe-area-inset-top,0px)) 12px max(12px,env(safe-area-inset-bottom,0px));background:rgba(3,6,12,.0);backdrop-filter:blur(0px);transition:background .45s,backdrop-filter .45s}
+.bc-ov[hidden]{display:none}
+.bc-ov.on{background:rgba(3,6,12,.82);backdrop-filter:blur(6px)}
+.bc-box{position:relative;width:min(100%,980px);height:min(100%,760px);border-radius:18px;overflow:hidden;border:1.5px solid #d8b878;background:#0a0a0b;box-shadow:0 0 70px rgba(216,184,120,.28);opacity:0;transform:perspective(1200px) translateY(70px) scale(.55) rotateY(-100deg);transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .5s}
+.bc-ov.on .bc-box{opacity:1;transform:none}
+.bc-box iframe{width:100%;height:100%;border:0;display:block;background:#0a0a0b}
+.bc-bar{position:absolute;z-index:3;top:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+.bc-bar a{pointer-events:auto;font:600 .8rem Arial,sans-serif;letter-spacing:.06em;color:#f3e3b5;text-decoration:underline;background:rgba(10,10,11,.7);border-radius:999px;padding:6px 12px}
+.bc-bar button{pointer-events:auto;width:40px;height:40px;border-radius:50%;border:1px solid #d8b878;background:rgba(10,10,11,.85);color:#f3e3b5;font-size:1.4rem;line-height:1;cursor:pointer}
+.bc-bar button:hover{background:#d8b878;color:#1a1408}
+@media(prefers-reduced-motion:reduce){.bc-spin,.bc-shadow{animation:none}.bc-box{transition:opacity .2s}}
+
+/* ---- hero photo background ---- */
+.hero{background:#fff!important}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;background:url(assets/images/hero-office.jpg) 72% center/cover no-repeat}
+.hero::after{display:block!important;content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.93) 30%,rgba(255,255,255,.6) 50%,rgba(255,255,255,.12) 72%,rgba(255,255,255,0) 100%),linear-gradient(0deg,#fff 0%,rgba(255,255,255,0) 22%)}
+@media(max-width:860px){
+  .hero::before{inset:0 0 auto 0;height:68%;background-position:68% top}
+  .hero::after{background:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.88) 50%,rgba(255,255,255,.45) 100%),linear-gradient(0deg,#fff 0%,#fff 30%,rgba(255,255,255,0) 62%)}
+}
+/* ---- our operations ---- */
+.ops{padding-block:56px}
+.ops-grid{display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"text photo" "hl photo";gap:24px 44px;align-items:start}
+.ops-text{grid-area:text}.ops-photo{grid-area:photo}.ops-hl{grid-area:hl}
+.ops-pill{display:inline-block;background:#d9ecfb;color:#1459a8;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem;border-radius:999px;padding:9px 18px}
+.ops .ops-text h2{font-weight:800!important;font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.15;margin:16px 0 12px;color:#0a2a4a;font-weight:800}
+.ops-text h2 em{font-style:normal;color:#1459a8}
+.ops-text p{font-size:1.1rem;color:#3a4a5e;margin:0;max-width:520px}
+.ops-photo{margin:0;padding:12px;background:#e6f2fc;border:2px solid #c5dff3;border-radius:26px;box-shadow:0 14px 34px rgba(20,89,168,.14)}
+.ops-photo img{display:block;width:100%;height:auto;border-radius:18px;aspect-ratio:3/2;object-fit:cover}
+.ops-hl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ops-hl li{display:flex;align-items:center;gap:14px;background:#f1f8fe;border:1.5px solid #c5dff3;border-radius:16px;padding:16px 18px;font-weight:800;color:#0a2a4a;font-size:1.05rem;line-height:1.25}
+.ops-hl svg{flex:0 0 46px;width:46px;height:46px}
+@media(max-width:860px){.ops-grid{grid-template-columns:1fr;grid-template-areas:"text" "photo" "hl";gap:20px}.ops{padding-block:40px}}
+@media(max-width:400px){.ops-hl li{padding:12px;gap:10px;font-size:.98rem}.ops-hl svg{flex-basis:38px;width:38px;height:38px}}
+
+/* ---- no sideways drag on phones ---- */
+html{overflow-x:hidden;max-width:100%;-webkit-text-size-adjust:100%}
+body{overflow-x:hidden;max-width:100%;position:relative;touch-action:pan-y pinch-zoom;overscroll-behavior-x:none}
+html,body{overflow-x:clip}
+.hero,.phones,main,section,footer,.wrap{max-width:100%}
+.hero,.hero-grid,.phones,.stats,.checks{overflow-x:clip}
+.hp{left:0!important;top:0;clip-path:inset(50%);pointer-events:none}
+
+/* ---- mobile polish: hero + operations (desktop untouched) ---- */
+@media(max-width:860px){
+  .hero::before,.hero::after{display:none!important}
+  .hero{background:#fff!important}
+  .hero-grid>div:first-child{position:relative}
+  .hero-grid>div:first-child::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:-30px;bottom:-26px;left:50%;width:100vw;margin-left:-50vw;
+    background:linear-gradient(0deg,#fff 0,rgba(255,255,255,0) 16%),linear-gradient(180deg,#fff 0,rgba(255,255,255,0) 8%),linear-gradient(90deg,#fff 0,rgba(255,255,255,.94) 30%,rgba(255,255,255,.55) 55%,rgba(255,255,255,0) 82%),url(assets/images/hero-office.jpg) 90% 0/auto 100% no-repeat}
+  .hero h1{font-size:1.72rem!important;line-height:1.2;margin:0 0 14px!important;max-width:100%}
+  .hero p.tagline{font-size:1.02rem;line-height:1.5;max-width:76%;margin:0 0 20px}
+  .hero .cta-row .btn{font-size:.96rem;padding:12px 18px}
+  .hero-trust{font-size:.92rem}
+  .ops{padding-block:36px 96px}
+  .ops-text h2{font-size:1.65rem!important;line-height:1.2;color:#0a2a4a}
+  .ops-text p{font-size:1.02rem;line-height:1.55;max-width:100%}
+  .ops-pill{box-shadow:0 4px 14px rgba(20,89,168,.12)}
+  .ops-photo{padding:8px;border-radius:22px}
+  .ops-photo img{aspect-ratio:16/9;border-radius:15px;object-position:50% 40%}
+  .ops-hl{gap:12px;align-items:stretch}
+  .ops-hl li{min-height:78px;padding:12px 12px;gap:10px;font-size:.98rem;border-radius:16px;min-width:0;overflow-wrap:normal;word-break:normal;hyphens:none}
+  .ops-hl svg{flex:0 0 34px;width:34px;height:34px}
+  .hero-grid{overflow-x:visible!important}
+}
+@media(max-width:380px){.ops-hl li{font-size:.88rem;padding:10px 8px;gap:8px}.ops-hl svg{flex-basis:28px;width:28px;height:28px}}
+
+/* ---- mobile hero: match reference exactly ---- */
+@media(max-width:860px){
+  .hero-grid>div:first-child::before{top:-64px;bottom:-14px;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath d='M0 38C70 8 150 6 230 28S350 50 400 18V60H0Z' fill='%23dcebfa' fill-opacity='.85'/%3E%3Cpath d='M0 50C90 26 170 30 250 46S360 52 400 36V60H0Z' fill='%23fff'/%3E%3C/svg%3E") bottom/100% 46px no-repeat,
+    linear-gradient(90deg,#fff 0,#fff 26%,rgba(255,255,255,.7) 44%,rgba(255,255,255,.18) 62%,rgba(255,255,255,0) 74%),
+    linear-gradient(180deg,rgba(255,255,255,.55) 0,rgba(255,255,255,0) 12%),
+    url(assets/images/hero-office.jpg) 78% 0/auto 100% no-repeat}
+  .hero h1{font-size:1.45rem!important;line-height:1.22;margin:0 0 12px!important;max-width:calc(100% - 96px)}
+  .hero p.tagline{font-size:.82rem;line-height:1.5;max-width:calc(100% - 150px);margin:0 0 16px}
+  .hero .cta-row{gap:10px}
+  .hero .cta-row .btn{font-size:.85rem;padding:9px 12px;width:182px;min-height:38px;justify-content:center;text-align:center}
+  .hero .hero-link{font-size:.84rem;margin-top:2px}
+  .hero-trust{font-size:.78rem;gap:0;margin-bottom:30px}
+  .hero-trust span+span{border-left:1.5px solid #6d7f95;margin-left:14px;padding-left:14px}
+}
+@media(max-width:380px){.hero h1{font-size:1.28rem!important;max-width:calc(100% - 70px)}.hero p.tagline{font-size:.78rem;max-width:calc(100% - 110px)}}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="wrap">
@@ -713,14 +834,38 @@ section.stats{padding-block:0!important}
     <div><b>72 hrs</b><span>From agreement to go-live</span></div>
     <div><b>2 hrs</b><span>Reply time in UK working hours</span></div>
     <div><b>15</b><span>Services covered</span></div>
-    <div><b>&pound;3.99</b><span>Starting hourly rate, ex VAT</span></div>
+    <div><b>1:1</b><span>Your own dedicated assistant</span></div>
   </div></section>
 
-  <section class="mon" id="live-monitoring">
+  <section class="mon" id="live-view">
     <div class="wrap">
-      <h2>Live monitoring</h2>
-      <p>If you wish, you can watch your assigned assistant at work in real time and see your tasks being handled. Live monitoring is an optional extra and is charged separately.</p>
-      <figure class="live-card"><span class="live-badge"><i></i>LIVE</span><img src="assets/live-monitoring.jpg?v=20261127" alt="An ORBIO ASSIST workstation" width="900" height="1200" loading="lazy"></figure>
+      <h2>See Your Assistant at Work, Not Your Data</h2>
+      <p>If you wish, you can watch your assigned assistant at their desk through an optional live view. The camera faces the assistant, never the screen, so your information is not shown or recorded. It is an optional extra, agreed in your proposal.</p>
+      <figure class="live-card"><span class="live-badge"><i></i>LIVE</span><img src="assets/images/live-monitoring.jpg?v=20261127" alt="An ORBIO ASSIST workstation" width="900" height="1200" loading="lazy"></figure>
+      <ul class="lv-points">
+        <li><b>Camera faces the assistant</b><span>Placed in front of the computer, so the screen is out of view.</span></li>
+        <li><b>Video only, no audio</b><span>No calls or conversations are picked up.</span></li>
+        <li><b>Not recorded</b><span>Live view only. Nothing is saved or stored.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="operations" class="ops">
+    <div class="wrap">
+      <div class="ops-grid">
+        <div class="ops-text">
+          <span class="ops-pill">Our Operations</span>
+          <h2>A Professional Environment. <em>Reliable Support.</em></h2>
+          <p>A dedicated working environment supporting dependable virtual assistant and customer service operations.</p>
+        </div>
+        <figure class="ops-photo"><img src="assets/images/meeting-room.jpg" alt="ORBIO ASSIST meeting room" width="1200" height="750" loading="lazy"></figure>
+        <ul class="ops-hl">
+          <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 28v-6a16 16 0 0 1 32 0v6" fill="none" stroke="#1459a8" stroke-width="2.6" stroke-linecap="round"/><rect x="5" y="25" width="7" height="12" rx="3" fill="none" stroke="#1459a8" stroke-width="2.6"/><rect x="36" y="25" width="7" height="12" rx="3" fill="none" stroke="#1459a8" stroke-width="2.6"/><path d="M39 37c0 4-4 6-9 6" fill="none" stroke="#1459a8" stroke-width="2.6" stroke-linecap="round"/><text x="24" y="31" text-anchor="middle" font-family="Arial" font-weight="700" font-size="9" fill="#1459a8">24/7</text></svg><span>24/7 Live Support</span></li>
+          <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="15" r="6.5" fill="#1459a8"/><path d="M12 37c0-7 5-11 12-11s12 4 12 11v3H12z" fill="#1459a8"/><circle cx="9" cy="19" r="4.5" fill="#1459a8" opacity=".75"/><path d="M0 36c0-5 3-8 9-8 1 0 2 0 3 .3-2 2-3 5-3 8v2H0z" fill="#1459a8" opacity=".75"/><circle cx="39" cy="19" r="4.5" fill="#1459a8" opacity=".75"/><path d="M48 36c0-5-3-8-9-8-1 0-2 0-3 .3 2 2 3 5 3 8v2h9z" fill="#1459a8" opacity=".75"/></svg><span>Professional Team</span></li>
+          <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 8 10v12c0 10 7 18 16 22 9-4 16-12 16-22V10z" fill="none" stroke="#1459a8" stroke-width="2.6" stroke-linejoin="round"/><path d="m16 24 6 6 11-12" fill="none" stroke="#1459a8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Structured Operations</span></li>
+          <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M3 20l8-6 9 3 6-3 8 3 8 5-4 8-5-3-7 8c-2 2-5 1-6-1-2 1-5 0-5-3-3 0-4-3-3-5l-6-3z" fill="none" stroke="#1459a8" stroke-width="2.4" stroke-linejoin="round"/><path d="m21 33 4-4m-8 1 5-5m6-7 5 5" fill="none" stroke="#1459a8" stroke-width="2.2" stroke-linecap="round"/></svg><span>Reliable Service</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -728,7 +873,7 @@ section.stats{padding-block:0!important}
     <div class="wrap">
       <div class="sec-head"><span class="kicker">What We Do</span><h2>Three ways we take work off your desk</h2></div>
       <div class="bundles" id="bundles-grid"></div>
-      <details class="allsvc"><summary>See all 15 services</summary><div class="chips plain" id="homeServiceChips"></div></details>
+      <details class="allsvc"><summary>See all services</summary><div class="chips plain" id="homeServiceChips"></div></details>
     </div>
   </section>
 
@@ -739,22 +884,44 @@ section.stats{padding-block:0!important}
     </div>
   </section>
 
-  <section id="industries">
+  <section id="bizcard">
     <div class="wrap">
-      <div class="sec-head"><span class="kicker">Industries</span><h2>Support for businesses like yours</h2></div>
-      <div class="ind-grid" id="industryChips"></div>
-      <div class="band" style="margin-top:32px">
-        <div><h2>Your Industry Not Listed? We Can Still Help.</h2><p>Tell us what you need and we will arrange the right support.</p></div>
-        <button class="btn btn-leaf" data-proposal data-service="Other / Custom requirement">Send Request</button>
+      <button type="button" class="bc-panel" data-card aria-haspopup="dialog" aria-label="Open the ORBIO LTD digital business card">
+        <span class="bc-stagebox" aria-hidden="true">
+          <span class="bc-stage">
+            <span class="bc-spin">
+              <span class="bc-tilt">
+                <span class="bc-face bc-front"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="28" fill="none" stroke="#d8b878" stroke-width="7"/><ellipse cx="50" cy="50" rx="44" ry="13" fill="none" stroke="#f3e3b5" stroke-width="2.5" transform="rotate(-28 50 50)"/><circle cx="83" cy="33" r="4.5" fill="#f3e3b5"/></svg><i>ORBIO</i></span>
+                <span class="bc-face bc-back"><i>ORBIO LTD</i><em>Reliable Services. Trusted Partnerships.</em></span>
+              </span>
+            </span>
+            <span class="bc-shadow"></span>
+          </span>
+        </span>
+        <span class="bc-copy">
+          <small>ORBIO LTD</small>
+          <b>Digital Business Card</b>
+          <span>Our full business card, with every contact link in one place.</span>
+          <span class="bc-tap">Tap to open</span>
+        </span>
+      </button>
+    </div>
+  </section>
+
+  <section id="enquire">
+    <div class="wrap">
+      <div class="band">
+        <div><h2>Tell Us About Your Business</h2><p>Send an enquiry or book a 15-minute call. Tell us about your industry and what you need, and we will contact you.</p></div>
+        <div class="band-btns"><button class="btn btn-leaf" data-proposal>Send My Enquiry</button><button class="btn btn-outline" data-call>Book a 15-Minute Call</button></div>
       </div>
     </div>
   </section>
 
   <section class="alt" id="pricing">
     <div class="wrap">
-      <div class="sec-head"><span class="kicker">Pricing</span><h2>Simple hourly pricing</h2></div>
+      <div class="sec-head"><span class="kicker">Pricing</span><h2>Pricing tailored to your needs</h2></div>
       <div class="pcards" id="plans"></div>
-      <p class="fine">Prices are per hour and exclude VAT where applicable. No fixed monthly commitment. Specialist work such as CRM, e-commerce and reporting is quoted at up to &pound;9.99 per hour. Your written proposal confirms the rate and scope.</p>
+      <p class="fine">Quotes exclude VAT where applicable. No fixed monthly commitment. Your written proposal confirms the rate and scope.</p>
     </div>
   </section>
 
@@ -808,11 +975,11 @@ section.stats{padding-block:0!important}
   </div>
   <section>
     <div class="wrap">
-      <div class="sec-head"><span class="kicker">Industries &amp; Services</span><h2>Select your area of support</h2><p>Prefer a simple summary? See our <a href="#bundles">three bundles</a> and <a href="#pricing">pricing</a>.</p></div>
+      <div class="sec-head"><span class="kicker">Services</span><h2>Select your area of support</h2><p>Prefer a simple summary? See our <a href="#bundles">three bundles</a> and <a href="#pricing">pricing</a>.</p></div>
       <div class="svc-grid" id="svcGrid"></div>
       <div class="band" style="margin-top:44px">
-        <div><h2>Your Industry Not Listed? We Can Still Help.</h2><p>Tell us about your industry in a proposal and we will arrange the right support system for you.</p></div>
-        <button class="btn btn-leaf" data-proposal data-service="Other / Custom requirement">Send Request</button>
+        <div><h2>Tell Us About Your Business</h2><p>Send an enquiry or book a 15-minute call. Tell us about your industry and what you need, and we will contact you.</p></div>
+        <div class="band-btns"><button class="btn btn-leaf" data-proposal data-service="Other / Custom requirement">Send My Enquiry</button><button class="btn btn-outline" data-call>Book a 15-Minute Call</button></div>
       </div>
       <p class="fine">ORBIO ASSIST provides administrative and business support. We do not provide regulated accounting, tax, legal or financial advice.</p>
     </div>
@@ -847,7 +1014,7 @@ section.stats{padding-block:0!important}
       <div class="tbl"><table>
         <thead><tr><th></th><th class="us">ORBIO ASSIST</th><th>Freelancer</th><th>In-house employee</th></tr></thead>
         <tbody>
-          <tr><td>Cost</td><td class="us">Pay by the hour, from &pound;3.99</td><td>Hourly or per project</td><td>Salary plus employer costs</td></tr>
+          <tr><td>Cost</td><td class="us">Tailored quote, no long contract</td><td>Hourly or per project</td><td>Salary plus employer costs</td></tr>
           <tr><td>Cover when away</td><td class="us">A team behind you</td><td>Often none</td><td>Arranged by you</td></tr>
           <tr><td>Range of skills</td><td class="us">Fifteen service areas</td><td>A few specialisms</td><td>One person's skills</td></tr>
           <tr><td>Scaling up or down</td><td class="us">Change support as you need</td><td>Limited by availability</td><td>Recruitment needed</td></tr>
@@ -980,6 +1147,12 @@ section.stats{padding-block:0!important}
   <div class="tip" id="waTip">Questions? Chat with us on WhatsApp</div>
 </div>
 
+<div class="bc-ov" id="bcOv" hidden>
+  <div class="bc-box" id="bcBox" role="dialog" aria-modal="true" aria-label="ORBIO LTD digital business card">
+    <div class="bc-bar"><a href="business-card.html" target="_blank" rel="noopener">Open full screen</a><button type="button" id="bcClose" aria-label="Close business card">&times;</button></div>
+    <iframe id="bcFrame" title="ORBIO LTD digital business card" loading="lazy"></iframe>
+  </div>
+</div>
 <script>
 (function(){
 "use strict";
@@ -1001,14 +1174,13 @@ var HERO_VIDEO="";                                 // optional: path to a loopin
 
 /* ---------- data ---------- */
 var BUNDLES=[
-{t:"Admin & Diary",d:"Keep your inbox, diary and records in order.",items:["Inbox management","Calendar and diary","Data entry","CRM and database"],more:["Administrative Support","Executive & Personal Assistance","CRM & Database Management","Research, Reporting & Data Management"]},
-{t:"Customers & Sales",d:"Reply faster and follow up on every lead.",items:["Customer service","Lead generation","Follow-ups","Sales and business development support"],more:["Customer Service & Client Support","Lead Generation & Prospect Research","Sales & Business Development Support"]},
-{t:"Growth & Business",d:"Support for the wider running of your business.",items:["E-commerce","Real estate","Recruitment and HR","Finance and bookkeeping admin","Operations and project coordination","Social media and digital marketing"],more:["E-commerce & Online Store Management","Real Estate & Property Management Support","Automotive & Car Rental Business Support","Recruitment & HR Administration","Finance & Bookkeeping Administration","Operations & Project Coordination","Social Media Management","Digital Marketing Assistance"]}
+{t:"Admin & Diary",d:"Keep your inbox, diary and records in order.",items:["Inbox management","Calendar and diary","Data entry","CRM and database"],more:["Administrative Support","Executive & Personal Assistance","Appointment & Diary Management","CRM & Database Management","Research, Reporting & Data Management"]},
+{t:"Customers & Sales",d:"Reply faster and follow up on every lead.",items:["Customer service","Lead generation","Follow-ups","Sales and business development support"],more:["Customer Service & Client Support","Call Handling & Booking Support","Lead Generation & Prospect Research","Sales & Business Development Support"]},
+{t:"Growth & Business",d:"Support for the wider running of your business.",items:["Order and listing management","Recruitment and HR","Finance and bookkeeping admin","Operations and project coordination","Social media and digital marketing"],more:["Order & Listing Management","Recruitment & HR Administration","Finance & Bookkeeping Administration","Operations & Project Coordination","Social Media Management","Digital Marketing Assistance"]}
 ];
-var WHY=[["UK registered","ORBIO LTD, company number 17473713, ICO registered."],["Dedicated, not shared","Your own assistant who gets to know your business."],["Backup if sick","Cover arranged if your assistant is unavailable."],["Daily report","A short summary of what has been done."],["Your data stays with you","Handled with care under UK GDPR."],["Live monitoring optional","Watch your assistant at work, as an optional extra."]];
-var SERVICES=["Administrative Support","Executive & Personal Assistance","Customer Service & Client Support","Lead Generation & Prospect Research","Sales & Business Development Support","CRM & Database Management","E-commerce & Online Store Management","Real Estate & Property Management Support","Automotive & Car Rental Business Support","Social Media Management","Digital Marketing Assistance","Recruitment & HR Administration","Finance & Bookkeeping Administration","Research, Reporting & Data Management","Operations & Project Coordination"].map(function(t){return {t:t};});
+var WHY=[["UK registered","ORBIO LTD, company number 17473713, ICO registered."],["Dedicated, not shared","Your own assistant who gets to know your business."],["Backup if sick","Cover arranged if your assistant is unavailable."],["Daily report","A short summary of what has been done."],["Your data stays with you","Handled with care under UK GDPR."],["Optional live view","See your assistant at their desk, if you wish. Video only, screen not shown, not recorded."]];
+var SERVICES=["Administrative Support","Executive & Personal Assistance","Customer Service & Client Support","Call Handling & Booking Support","Appointment & Diary Management","Lead Generation & Prospect Research","Sales & Business Development Support","CRM & Database Management","Order & Listing Management","Social Media Management","Digital Marketing Assistance","Recruitment & HR Administration","Finance & Bookkeeping Administration","Research, Reporting & Data Management","Operations & Project Coordination"].map(function(t){return {t:t};});
 
-var INDUSTRIES=["Real Estate","Car Rental","E-commerce","Marketing Agencies","IT","Professional Services","Recruitment","Financial & Insurance","Travel","Healthcare","Education","Construction","Consulting","SMEs"];
 
 var STEPS=[["Tell us what you need","Share your business and the help you are looking for."],["Meet your assistant","We match you with a dedicated assistant."],["Go live in 72 hours","Once agreed, your support starts within 72 hours."]];
 
@@ -1021,7 +1193,7 @@ var FAQS=[
 ["Is my data safe?","ORBIO LTD is UK GDPR compliant and handles business information with care. ORBIO LTD is registered with the ICO (ZC298303)."],
 ["Do you sign an NDA?","Yes. We can sign a confidentiality agreement on request."],
 ["Can I cancel?","Yes. There is no long contract. You pay for the hours you use and can stop at any time."],
-["How much does it cost?","Our rates start from £3.99 per hour and go up to £9.99 per hour for specialist work. There is no fixed monthly commitment."],
+["How much does it cost?","Pricing is tailored to the support you need, with no fixed monthly commitment. Send an enquiry or book a 15-minute call and we will give you a quote."],
 ["How can I contact ORBIO ASSIST?","Email "+CONTACT_EMAIL+" or "+SUPPORT_EMAIL+", call "+PHONE_DISPLAY+" or "+LANDLINE_DISPLAY+", message us on WhatsApp or use the form on this page."]
 ];
 
@@ -1050,16 +1222,15 @@ $("#whyCards").innerHTML=WHY.map(function(p){return '<div class="pillar"><span c
 var REVIEWS=[{"rating": 5, "name": "Raja Taxi Scotland", "role": "Taxi Dispatching", "text": "Orbio Assist has been handling our booking calls and dispatch support really well. Calls are answered promptly, usually within three rings, and bookings are passed to drivers accurately. Journey updates and customer enquiries are also handled efficiently."}, {"rating": 5, "name": "Royal Nawab", "role": "Restaurant Management", "text": "Orbio Assist has been a great help with handling customer calls, table reservations and enquiries. The team knows how to deal with customers politely, especially when handling complaints or busy periods. It has made our front-desk operations much smoother."}, {"rating": 5, "name": "PFG Group", "role": "Restaurant Operations", "text": "The team has helped us manage incoming calls, takeaway orders, reservation enquiries and customer follow-ups. They communicate clearly with customers and handle busy service periods professionally."}, {"rating": 5, "name": "Taskaler", "role": "E-commerce Management", "text": "Orbio Assist has supported our product research, listing management and order processing. Product hunting has been particularly helpful, and orders and customer queries are handled quickly and accurately."}, {"rating": 5, "name": "Be More Remote", "role": "Property Management", "text": "Orbio Assist has helped with uploading property listings, updating availability, managing enquiries and keeping property records up to date. We also receive regular updates, which makes managing our properties easier."}, {"rating": 5, "name": "Nycto", "role": "IT & Software Support", "text": "Orbio Assist has provided useful support with software administration, CRM updates, system monitoring and managing support requests. Their team keeps records organised and follows up on outstanding tasks."}, {"rating": 5, "name": "Bright Minds BPO", "role": "Operations Management", "text": "Orbio Assist has helped us manage daily operational tasks, maintain records, coordinate workflows and follow up on pending work. Their support has made our back-office processes more organised."}, {"rating": 5, "name": "A&H BPO Services", "role": "Claims Processing", "text": "Orbio Assist has been helpful with completing claim forms, entering customer information, checking supporting documents and updating claim records. Their attention to detail and timely follow-ups have been valuable to our workflow."}];
 function stars(n){var s="";for(var i=1;i<=5;i++){s+=i<=n?"&#9733;":"&#9734;";}return s;}
 if(REVIEWS.length){
-  $("#reviews").innerHTML=REVIEWS.map(function(r){return '<figure class="rev"><div class="stars" aria-label="'+(r.rating||5)+' out of 5 stars">'+stars(r.rating||5)+'</div><blockquote>&ldquo;'+esc(r.text)+'&rdquo;</blockquote><figcaption><b>'+esc(r.name||"Verified client")+'</b>'+(r.role?'<span>'+esc(r.role)+'</span>':'')+'</figcaption></figure>';}).join("");
+  $("#reviews").innerHTML=REVIEWS.map(function(r){return '<figure class="rev"><div class="stars" aria-label="'+(r.rating||5)+' out of 5 stars">'+stars(r.rating||5)+'</div><blockquote>&ldquo;'+esc(r.text)+'&rdquo;</blockquote><figcaption><b>'+esc(r.name||"Verified client")+'</b>'+'</figcaption></figure>';}).join("");
   $("#reviewsSection").hidden=false;
 }
 $("#footServices").innerHTML=SERVICES.slice(0,8).map(function(s){return '<li><a href="#services">'+esc(s.t)+'</a></li>';}).join("")+'<li><a href="#services">View all services</a></li>';
-$("#industryChips").innerHTML=INDUSTRIES.map(function(t){return '<span class="ind"><i aria-hidden="true"></i>'+esc(t)+'</span>';}).join("");
 $("#steps").innerHTML=STEPS.map(function(s){return '<div class="step"><h3>'+esc(s[0])+'</h3><p>'+esc(s[1])+'</p></div>';}).join("");
 $("#svcGrid").innerHTML=SERVICES.map(function(s,i){
   return '<button type="button" class="svc-card" data-proposal data-service="'+esc(s.t)+'"><span class="num">'+pad(i+1)+'</span><span class="nm">'+esc(s.t)+'</span><span class="go" aria-hidden="true">&rarr;</span></button>';
 }).join("");
-$("#plans").innerHTML=[["Everyday Support","From &pound;3.99","/ hour","Inbox, diary, data entry and document preparation.","Everyday Support",""],["Customer & Sales Support","From &pound;5.99","/ hour","Enquiries, follow-ups, lead research and bookings.","Customer & Sales Support","pop"],["Dedicated Assistant","Custom quote","","Your own assistant, with optional 24/7 live monitoring.","Dedicated Assistant",""]].map(function(c){return '<div class="pcard'+(c[5]?' pop':'')+'">'+(c[5]?'<span class="pop-tag">MOST POPULAR</span>':'')+'<h3>'+esc(c[0])+'</h3><div class="pc-price">'+c[1]+(c[2]?' <small>'+c[2]+'</small>':'')+'</div><p>'+esc(c[3])+'</p><button class="btn '+(c[5]?'btn-primary':'btn-line')+'" data-proposal data-plan="'+esc(c[4])+'">Send My Enquiry</button></div>';}).join("");
+$("#plans").innerHTML='<div class="pcard pop"><h3>Dedicated Assistant</h3><div class="pc-price">Custom quote</div><p>Your own assistant, matched to your business and tasks, with daily reports and an optional live view of their desk. Tell us what you need and we will confirm the price.</p><div class="pc-btns"><button class="btn btn-primary" data-proposal data-plan="Dedicated Assistant">Send My Enquiry</button><button class="btn btn-outline" data-call>Book a 15-Minute Call</button></div></div>';
 $("#pillars").innerHTML=PILLARS.map(function(p,i){
   return '<div class="pillar"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1459a8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><h3>'+esc(p[0])+'</h3><p>'+esc(p[1])+'</p></div>';
 }).join("");
@@ -1074,7 +1245,7 @@ $$(".ico").forEach(function(el){el.textContent=ICO_NUMBER||"Pending";});
 /* ---------- routing ---------- */
 var PAGES=["home","services","about"];
 var TITLES={"home":"Orbio Assist | Virtual Assistant & Business Support for UK Businesses","services":"Our Services | ORBIO ASSIST","about":"About Us | ORBIO ASSIST"};
-var ALIAS={industries:["home","industries"],"why-us":["about","why-us"],pricing:["home","pricing"],bundles:["home","bundles"],contact:[null,"proposal"]};
+var ALIAS={industries:["home","enquire"],"why-us":["about","why-us"],pricing:["home","pricing"],bundles:["home","bundles"],contact:[null,"proposal"]};
 var current="home";
 function route(){
   var h=(location.hash||"#home").slice(1),page,target=null;
@@ -1198,6 +1369,37 @@ if(HERO_VIDEO){
   setState(rows[2],"done");setState(rows[1],"prog");
   if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){setInterval(step,1100);}
 })();
+})();
+
+(function(){
+  var ov=document.getElementById("bcOv"),fr=document.getElementById("bcFrame"),last=null;
+  if(!ov)return;
+  function openCard(){
+    last=document.activeElement;
+    if(!fr.getAttribute("src"))fr.setAttribute("src","business-card.html");
+    ov.hidden=false;document.body.style.overflow="hidden";
+    requestAnimationFrame(function(){ov.classList.add("on");});
+    setTimeout(function(){var c=document.getElementById("bcClose");if(c)c.focus();},50);
+  }
+  function closeCard(){
+    ov.classList.remove("on");document.body.style.overflow="";
+    setTimeout(function(){ov.hidden=true;},450);
+    if(last&&last.focus)try{last.focus();}catch(e){}
+  }
+  document.addEventListener("click",function(e){
+    if(e.target.closest("[data-card]")){e.preventDefault();openCard();return;}
+    if(e.target.closest("#bcClose")||e.target===ov){closeCard();}
+  });
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!ov.hidden)closeCard();});
+  window.addEventListener("message",function(e){
+    if(e.source!==fr.contentWindow||!e.data||e.data.bc!=="open")return;
+    var h=String(e.data.href||"");
+    if(!/^(https:\/\/wa\.me\/|https:\/\/www\.orbioltd\.co\.uk|tel:|mailto:)/i.test(h))return;
+    var a=document.createElement("a");a.href=h;
+    if(/^https:/i.test(h)){a.target="_blank";a.rel="noopener";}
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+  });
+  window.addEventListener("message",function(e){if(e.source===fr.contentWindow&&e.data==="bc-close"&&!ov.hidden)closeCard();});
 })();
 </script>
 

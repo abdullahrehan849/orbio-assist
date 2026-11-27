@@ -7,7 +7,36 @@ Website for ORBIO ASSIST, a virtual assistant and business support brand operate
 | File | Purpose |
 | --- | --- |
 | `index.html` | The whole website (HTML, CSS and JavaScript in one file) |
-| `assets/favicon.svg`, `site.webmanifest` | Browser icon and basic site details |
+| `assets/icons/favicon.svg`, `site.webmanifest` | Browser icon and basic site details |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
+| `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
 | `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
 | `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
 | `privacy-policy.html`, `data-protection.html`, `complaints.html`, `cookie-policy.html`, `terms.html` | Legal pages linked from the footer (drafts: please have them reviewed) |
@@ -29,7 +58,8 @@ Website for ORBIO ASSIST, a virtual assistant and business support brand operate
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 | `vercel.json` | Optional settings if you host on Vercel |
 | `.well-known/security.txt` | Security contact |
-| `assets/` | Images used on the site (`live-monitoring.jpg`) |
+| `assets/images/` | Photos used on the site (hero office, meeting room, live view) |
+| `assets/icons/` | Favicon, app icons and touch icons |
 
 ## Settings (inside `index.html`)
 
@@ -67,4 +97,4 @@ GitHub does not unzip files. Do not upload the .zip itself.
 2. Open the unzipped folder, select everything inside it (including the `assets` folder) and drag it into your repository on GitHub: Add file, Upload files. The files must sit at the top level of the repository, not inside an extra folder.
 3. Files with the same name replace the old ones. Click Commit changes.
 4. Wait 1 to 2 minutes, then reload the site with Ctrl+F5 (or clear the browser cache on a phone). GitHub Pages can show the old version for a few minutes.
-5. Delete any old files left over from earlier uploads, such as a stray `favicon.svg` in the top level (the icon now lives in `assets/favicon.svg`).
+5. Delete any old files left over from earlier uploads, such as a stray `favicon.svg` in the top level (the icon now lives in `assets/icons/favicon.svg`).
