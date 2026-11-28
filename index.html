@@ -694,7 +694,6 @@ section.stats{padding-block:0!important}
 html{overflow-x:hidden;max-width:100%;-webkit-text-size-adjust:100%}
 body{overflow-x:hidden;max-width:100%;position:relative;touch-action:pan-y pinch-zoom;overscroll-behavior-x:none}
 html,body{overflow-x:clip}
-.hero,.phones,main,section,footer,.wrap{max-width:100%}
 .hero,.hero-grid,.phones,.stats,.checks{overflow-x:clip}
 .hp{left:0!important;top:0;clip-path:inset(50%);pointer-events:none}
 
@@ -738,6 +737,26 @@ html,body{overflow-x:clip}
   .hero-trust span+span{border-left:1.5px solid #6d7f95;margin-left:14px;padding-left:14px}
 }
 @media(max-width:380px){.hero h1{font-size:1.28rem!important;max-width:calc(100% - 70px)}.hero p.tagline{font-size:.78rem;max-width:calc(100% - 110px)}}
+
+/* ---- mobile hero: same line breaks on every phone + readable text over photo ---- */
+.mbr{display:none}
+@media(max-width:860px){
+  .mbr{display:inline}
+  .hero h1{font-size:min(1.45rem,6.1vw)!important;max-width:none!important;white-space:nowrap;
+    text-shadow:0 0 6px #fff,0 0 12px #fff,0 0 20px rgba(255,255,255,.9)}
+  .hero h1 .blue{text-shadow:0 0 6px #fff,0 0 12px #fff,0 0 20px rgba(255,255,255,.9)}
+  .hero p.tagline{font-size:min(.82rem,3.5vw);max-width:62%;color:#0a1b30;
+    text-shadow:0 0 5px #fff,0 0 10px #fff,0 0 16px rgba(255,255,255,.9)}
+  .hero .cta-row{flex-direction:column;align-items:flex-start;flex-wrap:nowrap}
+  .hero .cta-row .btn{flex:none;width:182px}
+  .hero .hero-link,.hero-trust{text-shadow:0 0 6px #fff,0 0 12px #fff}
+  .hero-grid>div:first-child::before{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath d='M0 38C70 8 150 6 230 28S350 50 400 18V60H0Z' fill='%23dcebfa' fill-opacity='.85'/%3E%3Cpath d='M0 50C90 26 170 30 250 46S360 52 400 36V60H0Z' fill='%23fff'/%3E%3C/svg%3E") bottom/100% 46px no-repeat,
+    linear-gradient(90deg,#fff 0,#fff 30%,rgba(255,255,255,.78) 48%,rgba(255,255,255,.4) 66%,rgba(255,255,255,0) 82%),
+    linear-gradient(180deg,rgba(255,255,255,.55) 0,rgba(255,255,255,0) 12%),
+    url(assets/images/hero-office.jpg) 78% 0/auto 100% no-repeat}
+}
+@media(max-width:380px){.hero h1{max-width:none!important}.hero p.tagline{max-width:66%}}
+@media(max-width:860px){.hero .cta-row .hero-link,.hero .cta-row a.hero-link,.hero .cta-row>a:not(.btn){align-self:flex-start;text-align:left;margin-left:0}}
 </style>
 </head>
 <body>
@@ -772,7 +791,7 @@ html,body{overflow-x:clip}
       <div class="hero-grid">
         <div>
           <span class="eyebrow">UK registered &bull; ICO registered</span>
-          <h1>Your UK Business, <span class="blue">Run Without You</span> Doing The Boring Work.</h1>
+          <h1>Your UK Business,<br class="mbr"> <span class="blue">Run Without You</span> Doing<br class="mbr"> The Boring Work.</h1>
           <p class="tagline">One dedicated assistant for inbox, diary, customers, CRM and admin. You focus on growth, we handle the rest. Live in 72 hours.</p>
           <div class="cta-row">
             <button class="btn btn-primary" data-proposal>Send My Enquiry</button>
